@@ -168,7 +168,9 @@ void SceneViewport::LoadIcons() {
 }
 
 void SceneViewport::OnUIRender() {
+    // Modern viewport styling
     ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0.0f, 0.0f));
+    ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.10f, 0.10f, 0.12f, 1.0f));
     ImGui::Begin("Scene Viewport", nullptr);
 
     m_Focused = ImGui::IsWindowFocused();
@@ -179,15 +181,17 @@ void SceneViewport::OnUIRender() {
         LoadIcons();
     }
 
-    // Transform tool icons above viewport
-    ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(6.0f, 6.0f));
-    ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(4.0f, 0.0f));
+    // Modern transform tool icons above viewport
+    ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(8.0f, 6.0f));
+    ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(4.0f, 4.0f));
+    ImGui::PushStyleVar(ImGuiStyleVar_FrameRounding, 3.0f);
     
     // Helper function to draw icon button with texture or fallback
     auto DrawIconButton = [this](const char* label, bool selected, ImVec2 size, std::shared_ptr<Texture> icon, std::function<void(ImVec2, ImVec2)> fallbackDraw) -> bool {
-        ImGui::PushStyleColor(ImGuiCol_Button, selected ? ImVec4(0.3f, 0.5f, 0.8f, 1.0f) : ImVec4(0.2f, 0.2f, 0.2f, 1.0f));
-        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.4f, 0.6f, 0.9f, 1.0f));
-        ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.2f, 0.4f, 0.7f, 1.0f));
+        // Modern button colors with blue accent
+        ImGui::PushStyleColor(ImGuiCol_Button, selected ? ImVec4(0.40f, 0.70f, 1.00f, 0.60f) : ImVec4(0.20f, 0.20f, 0.23f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, selected ? ImVec4(0.45f, 0.75f, 1.00f, 0.70f) : ImVec4(0.25f, 0.25f, 0.28f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonActive, selected ? ImVec4(0.35f, 0.65f, 0.95f, 0.80f) : ImVec4(0.30f, 0.30f, 0.33f, 1.0f));
         
         // Use unique label with ## prefix (## makes it invisible but gives unique ID)
         std::string uniqueLabel = std::string("##") + label;
@@ -287,7 +291,7 @@ void SceneViewport::OnUIRender() {
         ImGui::SetTooltip("Scale (R)");
     }
     
-    ImGui::PopStyleVar(2);
+    ImGui::PopStyleVar(3);
     
     ImGui::Separator();
 
@@ -338,6 +342,7 @@ void SceneViewport::OnUIRender() {
 
     ImGui::End();
     ImGui::PopStyleVar();
+    ImGui::PopStyleColor();
 }
 
 void SceneViewport::HandleMouseInput() {

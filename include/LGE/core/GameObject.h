@@ -4,8 +4,12 @@
 #include "LGE/math/Matrix.h"
 #include <string>
 #include <cstdint>
+#include <vector>
+#include <memory>
 
 namespace LGE {
+
+class Component;
 
 class GameObject {
 public:
@@ -34,6 +38,14 @@ public:
     // ID for picking
     uint32_t GetID() const { return m_ID; }
 
+    // Components
+    void AddComponent(std::shared_ptr<Component> component);
+    template<typename T>
+    std::shared_ptr<T> GetComponent() const;
+    template<typename T>
+    bool HasComponent() const;
+    const std::vector<std::shared_ptr<Component>>& GetComponents() const { return m_Components; }
+
 private:
     void UpdateTransformMatrix();
     
@@ -48,8 +60,26 @@ private:
     bool m_TransformDirty;
     bool m_Selected;
     
+    std::vector<std::shared_ptr<Component>> m_Components;
+    
     static uint32_t s_NextID;
 };
+
+// Template implementation
+template<typename T>
+std::shared_ptr<T> GameObject::GetComponent() const {
+    for (auto& comp : m_Components) {
+        if (auto casted = std::dynamic_pointer_cast<T>(comp)) {
+            return casted;
+        }
+    }
+    return nullptr;
+}
+
+template<typename T>
+bool GameObject::HasComponent() const {
+    return GetComponent<T>() != nullptr;
+}
 
 } // namespace LGE
 

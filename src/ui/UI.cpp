@@ -1,4 +1,5 @@
 #include "LGE/ui/UI.h"
+#include "LGE/ui/UITheme.h"
 #include "LGE/core/Window.h"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -24,18 +25,8 @@ void UI::Initialize(Window* window) {
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;  // Enable docking
     
-    // Style
-    ImGui::StyleColorsDark();
-    
-    // Configure docking
-    ImGuiStyle& style = ImGui::GetStyle();
-    style.WindowRounding = 0.0f;
-    style.ChildRounding = 0.0f;
-    style.FrameRounding = 0.0f;
-    style.GrabRounding = 0.0f;
-    style.PopupRounding = 0.0f;
-    style.ScrollbarRounding = 0.0f;
-    style.TabRounding = 0.0f;
+    // Apply modern theme
+    UITheme::ApplyModernTheme();
 
     GLFWwindow* glfwWindow = static_cast<GLFWwindow*>(window->GetNativeWindow());
     ImGui_ImplGlfw_InitForOpenGL(glfwWindow, true);

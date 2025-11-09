@@ -10,6 +10,8 @@ MainMenuBar::~MainMenuBar() {
 }
 
 void MainMenuBar::OnUIRender() {
+    // Modern menu bar styling
+    ImGui::PushStyleColor(ImGuiCol_MenuBarBg, ImVec4(0.12f, 0.12f, 0.14f, 1.0f));
     if (ImGui::BeginMainMenuBar()) {
         if (ImGui::BeginMenu("File")) {
             if (ImGui::MenuItem("New Scene")) {
@@ -71,10 +73,11 @@ void MainMenuBar::OnUIRender() {
         
         // Window title on the right
         ImGui::SameLine(ImGui::GetWindowWidth() - 200);
-        ImGui::Text("LGE Game Engine");
+        ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.8f, 1.0f), "LGE Game Engine");
         
         ImGui::EndMainMenuBar();
     }
+    ImGui::PopStyleColor();
 }
 
 } // namespace LGE

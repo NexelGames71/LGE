@@ -45,7 +45,18 @@ Texture::Texture()
     , m_Width(0)
     , m_Height(0)
     , m_IsHDR(false)
+    , m_HasMipmaps(false)
+    , m_WrapS(TextureWrapMode::ClampToEdge)
+    , m_WrapT(TextureWrapMode::ClampToEdge)
+    , m_MinFilter(TextureFilterMode::Linear)
+    , m_MagFilter(TextureFilterMode::Linear)
+    , m_Anisotropy(1.0f)
+    , m_ColorSpace(TextureColorSpace::sRGB)
 {
+    m_BorderColor[0] = 0.0f;
+    m_BorderColor[1] = 0.0f;
+    m_BorderColor[2] = 0.0f;
+    m_BorderColor[3] = 1.0f;
 }
 
 Texture::~Texture() {
@@ -198,10 +209,11 @@ bool Texture::LoadEXR(const std::string& filepath) {
     
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB32F, m_Width, m_Height, 0, GL_RGB, GL_FLOAT, rgbData.data());
     
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    // HDR textures are always linear
+    m_ColorSpace = TextureColorSpace::Linear;
+    
+    // Apply sampler state
+    ApplySamplerState();
     
     glBindTexture(GL_TEXTURE_2D, 0);
     
@@ -318,10 +330,11 @@ bool Texture::LoadHDR(const std::string& filepath) {
     
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB32F, m_Width, m_Height, 0, GL_RGB, GL_FLOAT, floatData.data());
     
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    // HDR textures are always linear
+    m_ColorSpace = TextureColorSpace::Linear;
+    
+    // Apply sampler state
+    ApplySamplerState();
     
     glBindTexture(GL_TEXTURE_2D, 0);
 
@@ -330,8 +343,157 @@ bool Texture::LoadHDR(const std::string& filepath) {
     return true;
 }
 
+// Helper function to convert wrap mode enum to OpenGL constant
+static uint32_t GetGLWrapMode(TextureWrapMode mode) {
+    switch (mode) {
+        case TextureWrapMode::Repeat: return GL_REPEAT;
+        case TextureWrapMode::ClampToEdge: return GL_CLAMP_TO_EDGE;
+        case TextureWrapMode::ClampToBorder: return GL_CLAMP_TO_BORDER;
+        case TextureWrapMode::MirrorRepeat: return GL_MIRRORED_REPEAT;
+        default: return GL_CLAMP_TO_EDGE;
+    }
+}
+
+// Helper function to convert filter mode enum to OpenGL constant
+static uint32_t GetGLFilterMode(TextureFilterMode mode) {
+    switch (mode) {
+        case TextureFilterMode::Nearest: return GL_NEAREST;
+        case TextureFilterMode::Linear: return GL_LINEAR;
+        case TextureFilterMode::NearestMipmapNearest: return GL_NEAREST_MIPMAP_NEAREST;
+        case TextureFilterMode::LinearMipmapNearest: return GL_LINEAR_MIPMAP_NEAREST;
+        case TextureFilterMode::NearestMipmapLinear: return GL_NEAREST_MIPMAP_LINEAR;
+        case TextureFilterMode::LinearMipmapLinear: return GL_LINEAR_MIPMAP_LINEAR;
+        default: return GL_LINEAR;
+    }
+}
+
+// Helper function to get internal format based on color space
+static uint32_t GetInternalFormat(int channels, TextureColorSpace colorSpace, bool isHDR) {
+    if (isHDR) {
+        if (channels == 3) return GL_RGB32F;
+        if (channels == 4) return GL_RGBA32F;
+        return GL_RGB32F;
+    } else {
+        if (colorSpace == TextureColorSpace::sRGB) {
+            if (channels == 3) return GL_SRGB8;
+            if (channels == 4) return GL_SRGB8_ALPHA8;
+            return GL_SRGB8_ALPHA8;
+        } else {
+            if (channels == 3) return GL_RGB8;
+            if (channels == 4) return GL_RGBA8;
+            return GL_RGBA8;
+        }
+    }
+}
+
+void Texture::ApplySamplerState() {
+    if (m_RendererID == 0) return;
+    
+    glBindTexture(GL_TEXTURE_2D, m_RendererID);
+    
+    // Set wrap modes
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GetGLWrapMode(m_WrapS));
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GetGLWrapMode(m_WrapT));
+    
+    // Set filter modes
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GetGLFilterMode(m_MinFilter));
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GetGLFilterMode(m_MagFilter));
+    
+    // Set border color
+    glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, m_BorderColor);
+    
+    // Set anisotropic filtering (if supported)
+    // Note: Anisotropic filtering extension constants vary by OpenGL version
+    // For OpenGL 3.3+, we check if the extension is available
+    if (m_Anisotropy > 1.0f) {
+        // Try to get max anisotropy (extension-specific, may not be available)
+        float maxAnisotropy = 1.0f;
+        // GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT is 0x84FF, but we'll use a safer approach
+        GLenum maxAnisoEnum = 0x84FF; // GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT
+        GLenum anisoEnum = 0x84FE;    // GL_TEXTURE_MAX_ANISOTROPY_EXT
+        
+        // Check if extension is available by trying to query it
+        // If it fails, we just skip anisotropic filtering
+        GLfloat maxAniso = 1.0f;
+        // Use a more compatible approach - just set it if > 1.0
+        // The driver will clamp it to the maximum supported value
+        float anisotropy = std::min(m_Anisotropy, 16.0f); // Cap at reasonable max
+        glTexParameterf(GL_TEXTURE_2D, anisoEnum, anisotropy);
+    }
+    
+    glBindTexture(GL_TEXTURE_2D, 0);
+}
+
+void Texture::SetWrapMode(TextureWrapMode wrapS, TextureWrapMode wrapT) {
+    m_WrapS = wrapS;
+    m_WrapT = wrapT;
+    if (m_RendererID != 0) {
+        ApplySamplerState();
+    }
+}
+
+void Texture::SetWrapMode(TextureWrapMode wrapMode) {
+    SetWrapMode(wrapMode, wrapMode);
+}
+
+void Texture::SetFilterMode(TextureFilterMode minFilter, TextureFilterMode magFilter) {
+    m_MinFilter = minFilter;
+    m_MagFilter = magFilter;
+    if (m_RendererID != 0) {
+        ApplySamplerState();
+    }
+}
+
+void Texture::SetFilterMode(TextureFilterMode filterMode) {
+    SetFilterMode(filterMode, filterMode);
+}
+
+void Texture::SetAnisotropicFiltering(float anisotropy) {
+    m_Anisotropy = std::max(1.0f, anisotropy);
+    if (m_RendererID != 0) {
+        ApplySamplerState();
+    }
+}
+
+void Texture::SetBorderColor(float r, float g, float b, float a) {
+    m_BorderColor[0] = r;
+    m_BorderColor[1] = g;
+    m_BorderColor[2] = b;
+    m_BorderColor[3] = a;
+    if (m_RendererID != 0) {
+        ApplySamplerState();
+    }
+}
+
+void Texture::GenerateMipmaps() {
+    if (m_RendererID == 0) return;
+    
+    glBindTexture(GL_TEXTURE_2D, m_RendererID);
+    glGenerateMipmap(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D, 0);
+    
+    m_HasMipmaps = true;
+    
+    // Update filter mode to use mipmaps if not already set
+    if (m_MinFilter == TextureFilterMode::Linear || m_MinFilter == TextureFilterMode::Nearest) {
+        m_MinFilter = TextureFilterMode::LinearMipmapLinear;
+        ApplySamplerState();
+    }
+}
+
+void Texture::SetColorSpace(TextureColorSpace colorSpace) {
+    m_ColorSpace = colorSpace;
+    // Note: Changing color space after texture creation requires re-uploading the texture
+    // This is a limitation - ideally we'd recreate the texture with the new format
+    Log::Warn("SetColorSpace called after texture creation. Texture format cannot be changed without reloading.");
+}
+
 // Load standard image formats (PNG, JPG, etc.) using stb_image
 bool Texture::LoadImageFile(const std::string& filepath) {
+    return LoadImageFile(filepath, TextureColorSpace::sRGB);
+}
+
+bool Texture::LoadImageFile(const std::string& filepath, TextureColorSpace colorSpace) {
     // Undefine Windows LoadImage macro to avoid conflict with Windows.h
     #ifdef LoadImage
     #undef LoadImage
@@ -347,24 +509,25 @@ bool Texture::LoadImageFile(const std::string& filepath) {
     
     m_Width = width;
     m_Height = height;
+    m_ColorSpace = colorSpace;
+    m_IsHDR = false;
     
     // Create OpenGL texture
     glGenTextures(1, &m_RendererID);
     glBindTexture(GL_TEXTURE_2D, m_RendererID);
     
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_Width, m_Height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+    uint32_t internalFormat = GetInternalFormat(4, colorSpace, false);
+    glTexImage2D(GL_TEXTURE_2D, 0, internalFormat, m_Width, m_Height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
     
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    // Apply sampler state
+    ApplySamplerState();
     
     glBindTexture(GL_TEXTURE_2D, 0);
     
     stbi_image_free(data);
     
-    m_IsHDR = false;
-    Log::Info("Loaded image texture: " + filepath + " (" + std::to_string(m_Width) + "x" + std::to_string(m_Height) + ")");
+    Log::Info("Loaded image texture: " + filepath + " (" + std::to_string(m_Width) + "x" + std::to_string(m_Height) + 
+              ", " + (colorSpace == TextureColorSpace::sRGB ? "sRGB" : "Linear") + ")");
     return true;
 }
 

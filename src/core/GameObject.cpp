@@ -1,4 +1,5 @@
 #include "LGE/core/GameObject.h"
+#include "LGE/core/Component.h"
 #include <cmath>
 
 namespace LGE {
@@ -44,6 +45,13 @@ void GameObject::UpdateTransformMatrix() {
 const Math::Matrix4& GameObject::GetTransformMatrix() {
     UpdateTransformMatrix();
     return m_TransformMatrix;
+}
+
+void GameObject::AddComponent(std::shared_ptr<Component> component) {
+    if (component) {
+        component->SetOwner(this);
+        m_Components.push_back(component);
+    }
 }
 
 } // namespace LGE

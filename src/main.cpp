@@ -22,6 +22,7 @@
 #include "LGE/ui/Details.h"
 #include "LGE/core/Input.h"
 #include "LGE/core/GameObject.h"
+#include "LGE/core/MaterialComponent.h"
 #include "imgui.h"
 #include "imgui_internal.h"
 #include <memory>
@@ -41,9 +42,17 @@ public:
         m_GridMaterial = LGE::Material::CreateDefaultGridMaterial();
         m_LitMaterial = LGE::Material::CreateDefaultLitMaterial();
         
+        // Also create a PBR material for testing
+        auto pbrMaterial = LGE::Material::CreateDefaultPBRMaterial();
+        
         if (!m_GridMaterial || !m_LitMaterial) {
             LGE::Log::Error("Failed to create default materials!");
             return false;
+        }
+        
+        // Use PBR material for MaterialComponent if available
+        if (pbrMaterial) {
+            m_LitMaterial = pbrMaterial; // Use PBR material for testing
         }
         
         // Keep shader reference for backward compatibility
@@ -131,6 +140,11 @@ public:
         m_CubeObject->SetRotation(LGE::Math::Vector3(0.0f, 0.0f, 0.0f));
         m_CubeObject->SetScale(LGE::Math::Vector3(1.0f, 1.0f, 1.0f));
         m_CubeObject->SetSelected(true);
+        
+        // Create and attach MaterialComponent
+        auto materialComp = std::make_shared<LGE::MaterialComponent>();
+        materialComp->SetMaterial(m_LitMaterial);
+        m_CubeObject->AddComponent(materialComp);
         
         // Add to GameObjects list
         m_GameObjects.push_back(m_CubeObject);
@@ -227,7 +241,7 @@ public:
         
         // Account for menu bar and toolbar
         float menuBarHeight = ImGui::GetFrameHeight();
-        float toolbarHeight = 40.0f;
+        float toolbarHeight = 28.0f; // Match Toolbar.cpp height
         float topOffset = menuBarHeight + toolbarHeight;
         
         ImGui::SetNextWindowPos(ImVec2(viewport->WorkPos.x, viewport->WorkPos.y + topOffset));
@@ -342,13 +356,24 @@ public:
                 m_Skybox->Render(*m_Camera, cloudOffset);
             }
             
-            // Render the cube with lit material
-            if (m_LitMaterial && m_LitMaterial->GetShader()) {
-                m_LitMaterial->Bind();
-                auto shader = m_LitMaterial->GetShader();
+            // Render the cube with material from MaterialComponent
+            auto materialComp = m_CubeObject ? m_CubeObject->GetComponent<LGE::MaterialComponent>() : nullptr;
+            auto material = materialComp ? materialComp->GetMaterial() : m_LitMaterial;
+            
+            if (material && material->GetShader()) {
+                // Bind material (from component or fallback)
+                if (materialComp) {
+                    materialComp->Bind();
+                } else {
+                    material->Bind();
+                }
+                auto shader = material->GetShader();
                 
                 // Set view-projection matrix
                 shader->SetUniformMat4("u_ViewProjection", m_Camera->GetViewProjectionMatrix().GetData());
+                
+                // Set view matrix (needed for PBR shader)
+                shader->SetUniformMat4("u_View", m_Camera->GetViewMatrix().GetData());
                 
                 // Set model matrix from GameObject transform
                 // Always use the cube's GameObject transform (cube is a test object)
@@ -386,7 +411,7 @@ public:
                 LGE::Math::Vector3 viewPos = m_Camera->GetPosition();
                 shader->SetUniform3f("u_ViewPos", viewPos.x, viewPos.y, viewPos.z);
                 
-                // Material color is already set by m_LitMaterial->Bind()
+                // Material properties are already set by material->Bind()
                 // But we need to set the use vertex color flag
                 shader->SetUniform1i("u_UseVertexColor", 0); // Use material color, not vertex color
                 
@@ -394,7 +419,11 @@ public:
                 // Draw cube: 6 faces * 2 triangles * 3 vertices = 36 vertices
                 glDrawArrays(GL_TRIANGLES, 0, 36);
                 m_VertexArray->Unbind();
-                m_LitMaterial->Unbind();
+                if (materialComp) {
+                    materialComp->GetMaterial()->Unbind();
+                } else {
+                    material->Unbind();
+                }
             }
             
             // ImGuizmo is rendered in OnUIRender, not here

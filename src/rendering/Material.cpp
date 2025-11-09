@@ -3,6 +3,7 @@
 #include "LGE/rendering/Texture.h"
 #include "LGE/core/FileSystem.h"
 #include "LGE/core/Log.h"
+#include <glad/glad.h>
 #include <algorithm>
 #include <cstring>
 
@@ -65,6 +66,9 @@ void Material::Bind() const {
     if (!m_Shader) {
         return;
     }
+
+    // Apply render state first
+    ApplyRenderState();
 
     m_Shader->Bind();
 
@@ -179,6 +183,59 @@ void Material::Bind() const {
 void Material::Unbind() const {
     if (m_Shader) {
         m_Shader->Unbind();
+    }
+}
+
+void Material::ApplyRenderState() const {
+    // Apply blend mode
+    switch (m_BlendMode) {
+        case BlendMode::Opaque:
+            glDisable(GL_BLEND);
+            break;
+        case BlendMode::Masked:
+            glDisable(GL_BLEND);
+            // Alpha testing is done in shader
+            break;
+        case BlendMode::Translucent:
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+            glBlendEquation(GL_FUNC_ADD);
+            break;
+        case BlendMode::Additive:
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_ONE, GL_ONE);
+            glBlendEquation(GL_FUNC_ADD);
+            break;
+        case BlendMode::Modulate:
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_DST_COLOR, GL_ZERO);
+            glBlendEquation(GL_FUNC_ADD);
+            break;
+    }
+    
+    // Apply cull mode
+    switch (m_CullMode) {
+        case CullMode::None:
+            glDisable(GL_CULL_FACE);
+            break;
+        case CullMode::Front:
+            glEnable(GL_CULL_FACE);
+            glCullFace(GL_FRONT);
+            break;
+        case CullMode::Back:
+            glEnable(GL_CULL_FACE);
+            glCullFace(GL_BACK);
+            break;
+    }
+    
+    // Apply depth write
+    switch (m_DepthWrite) {
+        case DepthWriteMode::Enabled:
+            glDepthMask(GL_TRUE);
+            break;
+        case DepthWriteMode::Disabled:
+            glDepthMask(GL_FALSE);
+            break;
     }
 }
 

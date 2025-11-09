@@ -156,6 +156,9 @@ public:
     // Material binding (uploads all properties to shader)
     void Bind() const;
     void Unbind() const;
+    
+    // Apply render state (blend mode, culling, depth write)
+    void ApplyRenderState() const;
 
     // Name
     const std::string& GetName() const { return m_Name; }

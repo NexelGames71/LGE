@@ -37,6 +37,8 @@ set(CORE_SOURCES
     src/core/FileSystem.cpp
     src/core/Input.cpp
     src/core/GameObject.cpp
+    src/core/Component.cpp
+    src/core/MaterialComponent.cpp
 )
 
 set(RENDERING_SOURCES
@@ -52,10 +54,12 @@ set(RENDERING_SOURCES
     src/rendering/DirectionalLight.cpp
     src/rendering/Framebuffer.cpp
     src/rendering/Material.cpp
+    src/rendering/MaterialInstance.cpp
 )
 
 set(UI_SOURCES
     src/ui/UI.cpp
+    src/ui/UITheme.cpp
     src/ui/SceneViewport.cpp
     src/ui/Hierarchy.cpp
     src/ui/Inspector.cpp
