@@ -12,6 +12,8 @@ MainMenuBar::~MainMenuBar() {
 void MainMenuBar::OnUIRender() {
     // Modern menu bar styling
     ImGui::PushStyleColor(ImGuiCol_MenuBarBg, ImVec4(0.12f, 0.12f, 0.14f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(0.0f, 0.0f, 0.0f, 0.0f)); // Transparent border
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowBorderSize, 0.0f);
     if (ImGui::BeginMainMenuBar()) {
         if (ImGui::BeginMenu("File")) {
             if (ImGui::MenuItem("New Scene")) {
@@ -58,9 +60,18 @@ void MainMenuBar::OnUIRender() {
         }
         
         if (ImGui::BeginMenu("Tools")) {
-            if (ImGui::MenuItem("Build")) {
-                // Build
-            }
+            ImGui::EndMenu();
+        }
+        
+        if (ImGui::BeginMenu("Build")) {
+            ImGui::EndMenu();
+        }
+        
+        if (ImGui::BeginMenu("Select")) {
+            ImGui::EndMenu();
+        }
+        
+        if (ImGui::BeginMenu("Actor")) {
             ImGui::EndMenu();
         }
         
@@ -77,7 +88,8 @@ void MainMenuBar::OnUIRender() {
         
         ImGui::EndMainMenuBar();
     }
-    ImGui::PopStyleColor();
+    ImGui::PopStyleVar();
+    ImGui::PopStyleColor(2);
 }
 
 } // namespace LGE

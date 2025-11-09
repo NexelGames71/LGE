@@ -81,18 +81,22 @@ void Toolbar::LoadIcons() {
 }
 
 void Toolbar::OnUIRender() {
-    // Modern toolbar styling
-    ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(8.0f, 4.0f));
+    // Modern toolbar styling - minimal padding
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(4.0f, 0.0f));
     ImGui::PushStyleVar(ImGuiStyleVar_WindowBorderSize, 0.0f);
-    ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.12f, 0.12f, 0.14f, 1.0f));
-    ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(0.25f, 0.25f, 0.28f, 1.0f));
+    ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(4.0f, 0.0f)); // Reduce vertical item spacing
+    ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.20f, 0.20f, 0.22f, 1.0f)); // Darker grey background
+    ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(0.0f, 0.0f, 0.0f, 0.0f)); // Transparent border
     
-    // Make toolbar non-dockable and position it below menu bar
+    // Make toolbar non-dockable and position it below menu bar with padding
+    ImGuiViewport* viewport = ImGui::GetMainViewport();
     float menuBarHeight = ImGui::GetFrameHeight();
-    float toolbarHeight = 28.0f; // Increased to accommodate icon buttons
+    float toolbarPadding = 2.0f; // Padding between menu bar and toolbar
+    float toolbarHeight = 5.0f; // Toolbar height
     
-    ImGui::SetNextWindowPos(ImVec2(0, menuBarHeight));
-    ImGui::SetNextWindowSize(ImVec2(ImGui::GetIO().DisplaySize.x, toolbarHeight));
+    // Position below menu bar with padding
+    ImGui::SetNextWindowPos(ImVec2(viewport->Pos.x, viewport->Pos.y + menuBarHeight + toolbarPadding));
+    ImGui::SetNextWindowSize(ImVec2(viewport->Size.x, toolbarHeight));
     
     ImGuiWindowFlags flags = ImGuiWindowFlags_NoTitleBar | 
                              ImGuiWindowFlags_NoResize | 
@@ -109,36 +113,24 @@ void Toolbar::OnUIRender() {
         LoadIcons();
     }
     
-    ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(6.0f, 0.0f));
-    ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(6.0f, 4.0f));
-    ImGui::PushStyleVar(ImGuiStyleVar_FrameRounding, 3.0f);
+    // Align content to top with minimal margin
+    ImGui::SetCursorPosY(1.0f); // Reduced top margin
     
-    // Selection mode dropdown (matches Unreal Engine)
-    const char* selectionModes[] = { "World", "Local" };
+    ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(6.0f, 1.0f)); // Reduced vertical padding
+    ImGui::PushStyleVar(ImGuiStyleVar_FrameRounding, 2.0f);
+    
+    // Left side: Project name
+    ImGui::TextColored(ImVec4(0.9f, 0.9f, 0.9f, 1.0f), "L_greek_island");
+    ImGui::SameLine();
+    ImGui::SetCursorPosX(ImGui::GetCursorPosX() + 8.0f);
+    
+    // Selection Mode dropdown
+    const char* selectionModes[] = { "Selection Mode", "World", "Local" };
     static int currentSelectionMode = 0;
-    ImGui::SetNextItemWidth(100.0f);
+    ImGui::SetNextItemWidth(120.0f);
     ImGui::Combo("##SelectionMode", &currentSelectionMode, selectionModes, IM_ARRAYSIZE(selectionModes));
-    
     ImGui::SameLine();
-    ImGui::Separator();
-    ImGui::SameLine();
-    
-    // Platforms icon/button (simplified as button for now)
-    if (ImGui::Button("Platforms")) {
-        // Platform options
-    }
-    
-    ImGui::SameLine();
-    ImGui::Separator();
-    ImGui::SameLine();
-    
-    // Center the play/stop/pause buttons
-    float windowWidth = ImGui::GetWindowWidth();
-    float buttonGroupWidth = 80.0f; // Approximate width of three buttons (24px each + spacing)
-    float centerX = (windowWidth - buttonGroupWidth) * 0.5f;
-    
-    // Calculate center position
-    ImGui::SetCursorPosX(centerX);
+    ImGui::SetCursorPosX(ImGui::GetCursorPosX() + 4.0f);
     
     // Helper function to draw icon button
     auto DrawIconButton = [](const char* label, bool selected, ImVec2 size, std::shared_ptr<Texture> icon) -> bool {
@@ -168,9 +160,21 @@ void Toolbar::OnUIRender() {
         return clicked;
     };
     
+    // Remaining mode buttons
+    if (ImGui::Button("Mesh")) { }
+    ImGui::SameLine();
+    if (ImGui::Button("Blueprints")) { }
+    ImGui::SameLine();
+    
+    // Center the play/stop/pause buttons
+    float windowWidth = ImGui::GetWindowWidth();
+    float buttonGroupWidth = 104.0f; // Updated for larger buttons (32px each + spacing)
+    float centerX = (windowWidth - buttonGroupWidth) * 0.5f;
+    ImGui::SetCursorPosX(centerX);
+    
     // Play button
     bool isPlaying = (m_PreviewState == GamePreviewState::Playing);
-    if (DrawIconButton("Play", isPlaying, ImVec2(24.0f, 20.0f), m_PlayIcon)) {
+    if (DrawIconButton("Play", isPlaying, ImVec2(32.0f, 24.0f), m_PlayIcon)) {
         if (m_PreviewState == GamePreviewState::Stopped || m_PreviewState == GamePreviewState::Paused) {
             m_PreviewState = GamePreviewState::Playing;
             // TODO: Start game preview
@@ -184,7 +188,7 @@ void Toolbar::OnUIRender() {
     
     // Pause button
     bool isPaused = (m_PreviewState == GamePreviewState::Paused);
-    if (DrawIconButton("Pause", isPaused, ImVec2(24.0f, 20.0f), m_PauseIcon)) {
+    if (DrawIconButton("Pause", isPaused, ImVec2(32.0f, 24.0f), m_PauseIcon)) {
         if (m_PreviewState == GamePreviewState::Playing) {
             m_PreviewState = GamePreviewState::Paused;
             // TODO: Pause game preview
@@ -198,7 +202,7 @@ void Toolbar::OnUIRender() {
     
     // Stop button
     bool isStopped = (m_PreviewState == GamePreviewState::Stopped);
-    if (DrawIconButton("Stop", isStopped, ImVec2(24.0f, 20.0f), m_StopIcon)) {
+    if (DrawIconButton("Stop", isStopped, ImVec2(32.0f, 24.0f), m_StopIcon)) {
         m_PreviewState = GamePreviewState::Stopped;
         // TODO: Stop game preview
     }
@@ -206,33 +210,15 @@ void Toolbar::OnUIRender() {
         ImGui::SetTooltip("Stop (S)");
     }
     
-    ImGui::SameLine();
-    ImGui::Separator();
-    ImGui::SameLine();
+    // Right side: Application title
+    ImGui::SetCursorPosX(windowWidth - 150.0f);
+    ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.8f, 1.0f), "LGE Game Engine");
     
-    // Viewport options (matching Unreal Engine)
-    ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.8f, 1.0f), "Perspective");
-    ImGui::SameLine();
-    ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.8f, 1.0f), "Lit");
-    ImGui::SameLine();
-    if (ImGui::Button("Show")) {
-        // Show options menu
-    }
-    
-    ImGui::SameLine();
-    ImGui::Separator();
-    ImGui::SameLine();
-    
-    // Settings gear icon (matching Unreal Engine)
-    if (ImGui::Button("⚙")) {
-        // Settings menu
-    }
-    
-    ImGui::PopStyleVar(3);
+    ImGui::PopStyleVar(2); // Pop FramePadding and FrameRounding
     ImGui::End();
     
     ImGui::PopStyleColor(2);
-    ImGui::PopStyleVar(2); // Pop WindowPadding and WindowBorderSize
+    ImGui::PopStyleVar(3); // Pop WindowPadding, WindowBorderSize, and ItemSpacing
 }
 
 } // namespace LGE

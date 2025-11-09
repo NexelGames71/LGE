@@ -3,6 +3,8 @@
 #include "LGE/core/Window.h"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <vector>
+#include <string>
 
 #define IMGUI_IMPL_OPENGL_LOADER_GLAD
 #include "imgui.h"
@@ -24,6 +26,35 @@ void UI::Initialize(Window* window) {
     ImGuiIO& io = ImGui::GetIO();
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;  // Enable docking
+    
+    // Load modern font
+    // Try to load a modern font from file first, then fall back to system fonts
+    ImFont* font = nullptr;
+    
+    // Try loading from common font file paths
+    std::vector<std::string> fontPaths = {
+        "assets/fonts/Roboto-Regular.ttf",
+        "assets/fonts/Inter-Regular.ttf",
+        "assets/fonts/SegoeUI.ttf",
+        "C:/Windows/Fonts/segoeui.ttf",  // Windows system font
+        "C:/Windows/Fonts/calibri.ttf",   // Windows system font
+    };
+    
+    for (const auto& path : fontPaths) {
+        font = io.Fonts->AddFontFromFileTTF(path.c_str(), 16.0f);
+        if (font) {
+            io.FontDefault = font;
+            break;
+        }
+    }
+    
+    // If no font loaded, use default but with better size
+    if (!font) {
+        ImFontConfig fontConfig;
+        fontConfig.SizePixels = 16.0f;
+        font = io.Fonts->AddFontDefault(&fontConfig);
+        io.FontDefault = font;
+    }
     
     // Apply modern theme
     UITheme::ApplyModernTheme();

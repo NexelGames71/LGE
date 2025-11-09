@@ -241,8 +241,9 @@ public:
         
         // Account for menu bar and toolbar
         float menuBarHeight = ImGui::GetFrameHeight();
-        float toolbarHeight = 28.0f; // Match Toolbar.cpp height
-        float topOffset = menuBarHeight + toolbarHeight;
+        float toolbarPadding = 2.0f; // Padding between menu bar and toolbar
+        float toolbarHeight = 5.0f; // Match Toolbar.cpp height
+        float topOffset = menuBarHeight + toolbarPadding + toolbarHeight;
         
         ImGui::SetNextWindowPos(ImVec2(viewport->WorkPos.x, viewport->WorkPos.y + topOffset));
         ImGui::SetNextWindowSize(ImVec2(viewport->WorkSize.x, viewport->WorkSize.y - topOffset));
