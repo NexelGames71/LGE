@@ -1,4 +1,4 @@
-# LGE - Lightweight Game Engine
+# LGE - Luma Game Engine
 
 A modern, cross-platform game engine supporting multiple rendering backends: OpenGL, DirectX 12, and Vulkan.
 
