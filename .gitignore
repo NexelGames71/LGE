@@ -25,6 +25,7 @@ CMakeFiles/
 cmake_install.cmake
 *.cmake
 !CMakeLists.txt
+!CMakePresets.json
 
 # Compiled files
 *.o
