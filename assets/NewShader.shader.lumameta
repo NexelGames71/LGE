@@ -1,0 +1,11 @@
+{
+  "Name": "NewShader",
+  "Path": "Assets/NewShader.shader",
+  "RelativePath": "",
+  "Type": "Shader",
+  "ImportTime": 1762730282,
+  "ModifyTime": 1762730282,
+  "Importer": "ShaderFactory",
+  "SourceFile": "",
+  "GUID": "4930228043502801741"
+}

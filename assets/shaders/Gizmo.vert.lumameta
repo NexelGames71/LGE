@@ -1,0 +1,11 @@
+{
+  "Name": "Gizmo",
+  "Path": "Assets\shaders\Gizmo.vert",
+  "RelativePath": "shaders/Gizmo.vert",
+  "Type": "Shader",
+  "ImportTime": 1762729461,
+  "ModifyTime": 1762729461,
+  "Importer": "",
+  "SourceFile": "",
+  "GUID": "8845329416118172661"
+}

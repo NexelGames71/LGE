@@ -1,0 +1,11 @@
+{
+  "Name": "Skybox",
+  "Path": "Assets\shaders\Skybox.frag",
+  "RelativePath": "shaders/Skybox.frag",
+  "Type": "Shader",
+  "ImportTime": 1762729461,
+  "ModifyTime": 1762729461,
+  "Importer": "",
+  "SourceFile": "",
+  "GUID": "16380400830789963694"
+}

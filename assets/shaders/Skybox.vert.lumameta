@@ -1,0 +1,11 @@
+{
+  "Name": "Skybox",
+  "Path": "Assets\shaders\Skybox.vert",
+  "RelativePath": "shaders/Skybox.vert",
+  "Type": "Shader",
+  "ImportTime": 1762729461,
+  "ModifyTime": 1762729461,
+  "Importer": "",
+  "SourceFile": "",
+  "GUID": "2257954040773899649"
+}

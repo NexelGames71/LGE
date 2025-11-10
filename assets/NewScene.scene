@@ -1,0 +1,17 @@
+{
+  "Name": "NewScene",
+  "Type": "Scene",
+  "GameObjects": [],
+  "Camera": {
+    "Position": [0.0, 0.0, 3.0],
+    "Target": [0.0, 0.0, 0.0],
+    "FOV": 45.0
+  },
+  "Lighting": {
+    "DirectionalLight": {
+      "Direction": [0.3, -0.8, 0.5],
+      "Color": [1.0, 0.98, 0.95],
+      "Intensity": 0.8
+    }
+  }
+}

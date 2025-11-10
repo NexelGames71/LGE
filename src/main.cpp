@@ -1,6 +1,13 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include "LGE/core/Application.h"
+#include "LGE/rendering/Renderer.h"
+#ifdef _WIN32
+#include <windows.h>
+#else
+#include <unistd.h>
+#endif
+#include <filesystem>
 #include "LGE/core/Log.h"
 #include "LGE/core/FileSystem.h"
 #include "LGE/core/Window.h"
@@ -20,14 +27,23 @@
 #include "LGE/ui/Toolbar.h"
 #include "LGE/ui/MainMenuBar.h"
 #include "LGE/ui/Details.h"
+#include "LGE/ui/ProjectBrowser.h"
+#include "LGE/ui/SplashScreen.h"
 #include "LGE/core/Input.h"
 #include "LGE/core/GameObject.h"
 #include "LGE/core/MaterialComponent.h"
+#include "LGE/assets/AssetManager.h"
+#include "LGE/assets/TextureImporter.h"
+#include "LGE/assets/ImporterRegistry.h"
+#include "LGE/assets/TextureExporter.h"
+#include "LGE/assets/ExporterRegistry.h"
 #include "imgui.h"
 #include "imgui_internal.h"
 #include <memory>
 #include <cstdint>
 #include <cmath>
+#include <fstream>
+#include <algorithm>
 
 class ExampleApp : public LGE::Application {
 public:
@@ -38,118 +54,24 @@ public:
             return false;
         }
 
-        // Setup materials
-        m_GridMaterial = LGE::Material::CreateDefaultGridMaterial();
-        m_LitMaterial = LGE::Material::CreateDefaultLitMaterial();
-        
-        // Also create a PBR material for testing
-        auto pbrMaterial = LGE::Material::CreateDefaultPBRMaterial();
-        
-        if (!m_GridMaterial || !m_LitMaterial) {
-            LGE::Log::Error("Failed to create default materials!");
-            return false;
-        }
-        
-        // Use PBR material for MaterialComponent if available
-        if (pbrMaterial) {
-            m_LitMaterial = pbrMaterial; // Use PBR material for testing
-        }
-        
-        // Keep shader reference for backward compatibility
-        m_Shader = m_LitMaterial->GetShader();
+        // Initialize empty scene - no test content
+        // GameObjects will be loaded from scene files
 
-        // Cube vertices with colors and normals
-        // Format: x, y, z, r, g, b, nx, ny, nz
-        // Each face has 2 triangles (6 vertices)
-        float vertices[] = {
-            // Front face (Red) - normal: 0, 0, 1
-            -0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f,  0.0f, 0.0f, 1.0f,  // Bottom left
-             0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f,  0.0f, 0.0f, 1.0f,  // Bottom right
-             0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f,  0.0f, 0.0f, 1.0f,  // Top right
-            -0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f,  0.0f, 0.0f, 1.0f,  // Bottom left
-             0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f,  0.0f, 0.0f, 1.0f,  // Top right
-            -0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f,  0.0f, 0.0f, 1.0f,  // Top left
-            
-            // Back face (Green) - normal: 0, 0, -1
-            -0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 0.0f, -1.0f,  // Bottom left
-             0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 0.0f, -1.0f,  // Top right
-             0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 0.0f, -1.0f,  // Bottom right
-            -0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 0.0f, -1.0f,  // Bottom left
-            -0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 0.0f, -1.0f,  // Top left
-             0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 0.0f, -1.0f,  // Top right
-            
-            // Left face (Blue) - normal: -1, 0, 0
-            -0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 1.0f,  -1.0f, 0.0f, 0.0f,  // Bottom back
-            -0.5f, -0.5f,  0.5f,  0.0f, 0.0f, 1.0f,  -1.0f, 0.0f, 0.0f,  // Bottom front
-            -0.5f,  0.5f,  0.5f,  0.0f, 0.0f, 1.0f,  -1.0f, 0.0f, 0.0f,  // Top front
-            -0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 1.0f,  -1.0f, 0.0f, 0.0f,  // Bottom back
-            -0.5f,  0.5f,  0.5f,  0.0f, 0.0f, 1.0f,  -1.0f, 0.0f, 0.0f,  // Top front
-            -0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f,  -1.0f, 0.0f, 0.0f,  // Top back
-            
-            // Right face (Yellow) - normal: 1, 0, 0
-             0.5f, -0.5f, -0.5f,  1.0f, 1.0f, 0.0f,  1.0f, 0.0f, 0.0f,  // Bottom back
-             0.5f,  0.5f, -0.5f,  1.0f, 1.0f, 0.0f,  1.0f, 0.0f, 0.0f,  // Top back
-             0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f,  1.0f, 0.0f, 0.0f,  // Bottom front
-             0.5f, -0.5f,  0.5f,  1.0f, 1.0f, 0.0f,  1.0f, 0.0f, 0.0f,  // Bottom front
-             0.5f,  0.5f, -0.5f,  1.0f, 1.0f, 0.0f,  1.0f, 0.0f, 0.0f,  // Top back
-             0.5f,  0.5f,  0.5f,  1.0f, 1.0f, 0.0f,  1.0f, 0.0f, 0.0f,  // Top front
-            
-            // Top face (Cyan) - normal: 0, 1, 0
-            -0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 1.0f,  0.0f, 1.0f, 0.0f,  // Back left
-             0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 1.0f,  0.0f, 1.0f, 0.0f,  // Front right
-             0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 1.0f,  0.0f, 1.0f, 0.0f,  // Back right
-            -0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 1.0f,  0.0f, 1.0f, 0.0f,  // Back left
-            -0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 1.0f,  0.0f, 1.0f, 0.0f,  // Front left
-             0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 1.0f,  0.0f, 1.0f, 0.0f,  // Front right
-            
-            // Bottom face (Magenta) - normal: 0, -1, 0
-            -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 1.0f,  0.0f, -1.0f, 0.0f,  // Back left
-             0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 1.0f,  0.0f, -1.0f, 0.0f,  // Back right
-             0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 1.0f,  0.0f, -1.0f, 0.0f,  // Front right
-            -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 1.0f,  0.0f, -1.0f, 0.0f,  // Back left
-             0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 1.0f,  0.0f, -1.0f, 0.0f,  // Front right
-            -0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 1.0f,  0.0f, -1.0f, 0.0f   // Front left
-        };
-
-        // Create vertex buffer
-        m_VertexBuffer = std::make_unique<LGE::VertexBuffer>(vertices, static_cast<uint32_t>(sizeof(vertices)));
-
-        // Create vertex array and set up attributes manually (position + color + normal)
-        m_VertexArray = std::make_unique<LGE::VertexArray>();
-        m_VertexArray->Bind();
-        m_VertexBuffer->Bind();
+        // Don't initialize Asset Manager yet - wait until project is loaded
+        // This will be initialized when a project is created or opened
+        m_AssetManager = std::make_unique<LGE::AssetManager>();
         
-        // Set up vertex attributes: position (0), color (1), normal (2)
-        // Stride: 9 floats (3 pos + 3 color + 3 normal)
-        // Position
-        glEnableVertexAttribArray(0);
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void*)0);
-        // Color
-        glEnableVertexAttribArray(1);
-        glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void*)(3 * sizeof(float)));
-        // Normal
-        glEnableVertexAttribArray(2);
-        glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void*)(6 * sizeof(float)));
+        // Register importers
+        auto textureImporter = std::make_shared<LGE::TextureImporter>();
+        LGE::ImporterRegistry::Get().RegisterImporter(textureImporter);
         
-        m_VertexArray->Unbind();
-        m_VertexBuffer->Unbind();
-
-        // Create GameObject for the cube
-        m_CubeObject = std::make_shared<LGE::GameObject>("Cube");
-        m_CubeObject->SetPosition(LGE::Math::Vector3(0.0f, 0.0f, 0.0f));
-        m_CubeObject->SetRotation(LGE::Math::Vector3(0.0f, 0.0f, 0.0f));
-        m_CubeObject->SetScale(LGE::Math::Vector3(1.0f, 1.0f, 1.0f));
-        m_CubeObject->SetSelected(true);
+        // Register exporters
+        auto textureExporter = std::make_shared<LGE::TextureExporter>();
+        LGE::ExporterRegistry::Get().RegisterExporter(textureExporter);
         
-        // Create and attach MaterialComponent
-        auto materialComp = std::make_shared<LGE::MaterialComponent>();
-        materialComp->SetMaterial(m_LitMaterial);
-        m_CubeObject->AddComponent(materialComp);
-        
-        // Add to GameObjects list
-        m_GameObjects.push_back(m_CubeObject);
-
         // Setup UI panels
+        m_ProjectBrowser = std::make_unique<LGE::ProjectBrowser>();
+        m_SplashScreen = std::make_unique<LGE::SplashScreen>();
         m_MainMenuBar = std::make_unique<LGE::MainMenuBar>();
         m_Toolbar = std::make_unique<LGE::Toolbar>();
         m_Hierarchy = std::make_unique<LGE::Hierarchy>();
@@ -158,24 +80,26 @@ public:
         m_SceneViewport = std::make_unique<LGE::SceneViewport>();
         m_Details = std::make_unique<LGE::Details>();
         
-        // Setup camera
+        // Setup MainMenuBar callbacks
+        if (m_MainMenuBar) {
+            m_MainMenuBar->SetOnSaveScene([this]() {
+                ShowSaveSceneDialog();
+            });
+        }
+        
+        // Initialize project state
+        m_ProjectLoaded = false;
+        m_CurrentProjectPath = "";
+        
+        // Asset Manager will be connected to Content Browser when project is loaded
+        // Scene viewport, hierarchy, and inspector will be set up when project is loaded
+        
+        // Setup camera (will be used when project is loaded)
         float aspectRatio = static_cast<float>(m_Window->GetWidth()) / static_cast<float>(m_Window->GetHeight());
         m_Camera = std::make_unique<LGE::Camera>();
         m_Camera->SetPerspective(45.0f, aspectRatio, 0.1f, 100.0f);
         m_Camera->SetPosition(LGE::Math::Vector3(0.0f, 0.0f, 3.0f));
         m_Camera->SetTarget(LGE::Math::Vector3(0.0f, 0.0f, 0.0f));
-        
-        // Set camera to viewport
-        m_SceneViewport->SetCamera(m_Camera.get());
-        
-        // Set cube as selected object in viewport and panels
-        if (m_CubeObject) {
-            m_SceneViewport->SetGameObjects(m_GameObjects);
-            m_SceneViewport->SetSelectedObject(m_CubeObject.get());
-            m_Hierarchy->SetGameObjects(m_GameObjects);
-            m_Hierarchy->SetSelectedObject(m_CubeObject.get());
-            m_Inspector->SetSelectedObject(m_CubeObject.get());
-        }
         
         // Setup initial docking layout (only on first run)
         static bool firstTime = true;
@@ -219,22 +143,177 @@ public:
         LGE::Log::Info("Controls: WASD - Move, Right Click + Drag - Rotate, Mouse Wheel - Zoom, Middle Mouse + Drag - Pan");
         return true;
     }
+    
+    void LoadProject(const std::string& projectPath) {
+        if (projectPath.empty()) {
+            LGE::Log::Error("ExampleApp: Cannot load project - path is empty");
+            return;
+        }
+        
+        // Normalize the project path
+        std::filesystem::path path(projectPath);
+        if (!path.is_absolute()) {
+            path = std::filesystem::absolute(path);
+        }
+        
+        // If it's a project file (.lgeproject), extract the project directory
+        std::string projectDir;
+        if (path.extension() == ".lgeproject") {
+            // It's a project file, get the parent directory
+            projectDir = path.parent_path().string();
+            LGE::Log::Info("ExampleApp: Project file detected, using directory: " + projectDir);
+        } else {
+            // It's a directory, use it directly
+            projectDir = path.string();
+            LGE::Log::Info("ExampleApp: Project directory detected: " + projectDir);
+        }
+        
+        // Set project path (but don't mark as loaded yet - wait for splash screen)
+        m_CurrentProjectPath = projectDir;
+        
+        // Close Project Browser and show Splash Screen
+        if (m_ProjectBrowser) {
+            m_ProjectBrowser->SetOpen(false);
+        }
+        
+        if (m_SplashScreen) {
+            m_SplashScreen->StartLoading();
+            m_SplashScreen->SetOpen(true);
+        }
+        
+        LGE::Log::Info("ExampleApp: Starting project load: " + m_CurrentProjectPath);
+    }
+    
+    void CompleteProjectLoading() {
+        // This is called after splash screen loading completes
+        if (m_CurrentProjectPath.empty()) {
+            return;
+        }
+        
+        // Mark project as loaded
+        m_ProjectLoaded = true;
+        
+        // Update Asset Manager to use project's Assets directory
+        // The Assets folder is where all project assets are located
+        if (m_AssetManager) {
+            std::filesystem::path assetsPath = std::filesystem::path(m_CurrentProjectPath) / "Assets";
+            
+            // Ensure Assets directory exists - create if it doesn't
+            if (!std::filesystem::exists(assetsPath)) {
+                std::filesystem::create_directories(assetsPath);
+                LGE::Log::Info("ExampleApp: Created Assets folder: " + assetsPath.string());
+            }
+            
+            // Initialize Asset Manager with the project's Assets directory
+            // All assets for this project will be located in this folder
+            if (m_AssetManager->Initialize(assetsPath.string())) {
+                LGE::Log::Info("ExampleApp: Asset Manager initialized with project Assets folder: " + assetsPath.string());
+                
+                // Scan assets in the project's Assets directory
+                m_AssetManager->ScanAssets();
+            } else {
+                LGE::Log::Error("ExampleApp: Failed to initialize Asset Manager with project Assets path: " + assetsPath.string());
+            }
+        }
+        
+        // Connect Asset Manager to Content Browser
+        if (m_ContentBrowser && m_AssetManager) {
+            m_ContentBrowser->SetAssetManager(m_AssetManager.get());
+        }
+        
+        // Set default scene path (SampleScene.scene in Assets/Scenes)
+        std::filesystem::path defaultScenePath = std::filesystem::path(m_CurrentProjectPath) / "Assets" / "Scenes" / "SampleScene.scene";
+        if (std::filesystem::exists(defaultScenePath)) {
+            m_CurrentScenePath = std::filesystem::absolute(defaultScenePath).string();
+            std::replace(m_CurrentScenePath.begin(), m_CurrentScenePath.end(), '\\', '/');
+            LGE::Log::Info("ExampleApp: Loaded default scene: " + m_CurrentScenePath);
+        }
+        
+        // Setup scene viewport, hierarchy, and inspector
+        if (m_SceneViewport) {
+            m_SceneViewport->SetCamera(m_Camera.get());
+            m_SceneViewport->SetGameObjects(m_GameObjects);
+            m_SceneViewport->SetSelectedObject(nullptr);
+        }
+        
+        if (m_Hierarchy && m_Inspector) {
+            m_Hierarchy->SetGameObjects(m_GameObjects);
+            m_Hierarchy->SetSelectedObject(nullptr);
+            m_Inspector->SetSelectedObject(nullptr);
+        }
+        
+        // Close splash screen
+        if (m_SplashScreen) {
+            m_SplashScreen->SetOpen(false);
+        }
+        
+        LGE::Log::Info("ExampleApp: Project loaded: " + m_CurrentProjectPath);
+    }
 
     void OnUpdate(float deltaTime) override {
+        // Only update if project is loaded
+        if (!m_ProjectLoaded) {
+            return;
+        }
+        
         // Update animation time
         m_Time += deltaTime;
         
-        // Update camera controller
-        if (m_CameraController) {
-            m_CameraController->OnUpdate(deltaTime);
+        // Update camera controller with viewport state
+        if (m_CameraController && m_SceneViewport) {
+            bool viewportFocused = m_SceneViewport->IsFocused();
+            bool viewportHovered = m_SceneViewport->IsHovered();
+            m_CameraController->OnUpdate(deltaTime, viewportFocused, viewportHovered);
         }
     }
 
     void OnRender() override {
+        // Render Splash Screen if open (after project creation/opening)
+        if (m_SplashScreen && m_SplashScreen->IsOpen()) {
+            // Set clear color to black for splash screen
+            if (m_Renderer) {
+                m_Renderer->Clear(0.0f, 0.0f, 0.0f, 1.0f);
+            }
+            
+            m_SplashScreen->OnUIRender();
+            
+            // Check if loading is complete
+            if (m_SplashScreen->IsLoadingComplete()) {
+                CompleteProjectLoading();
+            }
+            return; // Don't render main editor UI while splash screen is open
+        }
+        
+        // Render Project Browser first (if open or no project loaded)
+        if (m_ProjectBrowser && (!m_ProjectLoaded || m_ProjectBrowser->IsOpen())) {
+            // Set clear color to match Project Browser background (dark gray)
+            if (m_Renderer) {
+                m_Renderer->Clear(0.12f, 0.12f, 0.14f, 1.0f);
+            }
+            
+            m_ProjectBrowser->OnUIRender();
+            
+            // If project was created, load it and close the browser
+            if (m_ProjectBrowser->WasProjectCreated()) {
+                std::string projectPath = m_ProjectBrowser->GetCreatedProjectPath();
+                LoadProject(projectPath);
+                m_ProjectBrowser->SetOpen(false);
+            }
+            return; // Don't render main editor UI while project browser is open or no project loaded
+        }
+        
+        // Only render editor UI if a project is loaded
+        if (!m_ProjectLoaded) {
+            return;
+        }
+        
         // Render main menu bar
         if (m_MainMenuBar) {
             m_MainMenuBar->OnUIRender();
         }
+        
+        // Render save scene dialog
+        RenderSaveSceneDialog();
         
         // Create dock space over viewport
         ImGuiViewport* viewport = ImGui::GetMainViewport();
@@ -309,7 +388,8 @@ public:
             m_SceneViewport->SetGameObjects(m_GameObjects);
         }
         
-        if (m_Hierarchy) {
+        // Render hierarchy (only if project is loaded)
+        if (m_Hierarchy && m_ProjectLoaded) {
             m_Hierarchy->OnUIRender();
             // Sync selection from Hierarchy to other panels
             if (m_Hierarchy->GetSelectedObject() != m_SceneViewport->GetSelectedObject()) {
@@ -318,7 +398,8 @@ public:
             }
         }
         
-        if (m_SceneViewport) {
+        // Render scene viewport (only if project is loaded)
+        if (m_SceneViewport && m_ProjectLoaded) {
             m_SceneViewport->OnUIRender();
             // Sync selection from SceneViewport to other panels
             if (m_SceneViewport->GetSelectedObject() != m_Hierarchy->GetSelectedObject()) {
@@ -327,11 +408,14 @@ public:
             }
         }
         
-        if (m_Inspector) {
+        // Render inspector (only if project is loaded)
+        if (m_Inspector && m_ProjectLoaded) {
             m_Inspector->OnUIRender();
         }
         
-        if (m_ContentBrowser) {
+        // Render content browser (only if project is loaded)
+        if (m_ContentBrowser && m_ProjectLoaded) {
+            m_ContentBrowser->OnUpdate(0.016f); // Approximate delta time
             m_ContentBrowser->OnUIRender();
         }
         
@@ -342,8 +426,8 @@ public:
             m_Toolbar->OnUIRender();
         }
         
-        // Render scene to framebuffer (everything should render here)
-        if (m_SceneViewport && m_SceneViewport->GetWidth() > 0 && m_SceneViewport->GetHeight() > 0) {
+        // Render scene to framebuffer (only if project is loaded)
+        if (m_ProjectLoaded && m_SceneViewport && m_SceneViewport->GetWidth() > 0 && m_SceneViewport->GetHeight() > 0) {
             // Begin rendering to framebuffer
             m_SceneViewport->BeginRender();
             
@@ -357,75 +441,8 @@ public:
                 m_Skybox->Render(*m_Camera, cloudOffset);
             }
             
-            // Render the cube with material from MaterialComponent
-            auto materialComp = m_CubeObject ? m_CubeObject->GetComponent<LGE::MaterialComponent>() : nullptr;
-            auto material = materialComp ? materialComp->GetMaterial() : m_LitMaterial;
-            
-            if (material && material->GetShader()) {
-                // Bind material (from component or fallback)
-                if (materialComp) {
-                    materialComp->Bind();
-                } else {
-                    material->Bind();
-                }
-                auto shader = material->GetShader();
-                
-                // Set view-projection matrix
-                shader->SetUniformMat4("u_ViewProjection", m_Camera->GetViewProjectionMatrix().GetData());
-                
-                // Set view matrix (needed for PBR shader)
-                shader->SetUniformMat4("u_View", m_Camera->GetViewMatrix().GetData());
-                
-                // Set model matrix from GameObject transform
-                // Always use the cube's GameObject transform (cube is a test object)
-                if (m_CubeObject) {
-                    const LGE::Math::Matrix4& modelMatrix = m_CubeObject->GetTransformMatrix();
-                    shader->SetUniformMat4("u_Model", modelMatrix.GetData());
-                } else {
-                    // Fallback: use identity matrix
-                    LGE::Math::Matrix4 modelMatrix;
-                    shader->SetUniformMat4("u_Model", modelMatrix.GetData());
-                }
-                
-                // Set light uniforms with dynamic variation
-                if (m_DirectionalLight) {
-                    LGE::Math::Vector3 baseLightDir = m_DirectionalLight->GetDirection();
-                    
-                    // Slowly rotate light direction for dynamic lighting
-                    float lightRotationSpeed = 0.2f; // Slower than cube
-                    float lightAngle = m_Time * lightRotationSpeed;
-                    LGE::Math::Matrix4 lightRot = LGE::Math::Matrix4::Rotate(lightAngle, LGE::Math::Vector3(0.0f, 1.0f, 0.0f));
-                    LGE::Math::Vector4 rotatedDir = lightRot * LGE::Math::Vector4(baseLightDir.x, baseLightDir.y, baseLightDir.z, 0.0f);
-                    LGE::Math::Vector3 lightDir(rotatedDir.x, rotatedDir.y, rotatedDir.z);
-                    
-                    // Subtle intensity variation (simulating time of day)
-                    float intensityVariation = 0.15f * std::sin(m_Time * 0.3f) + 1.0f; // Oscillates between 0.85 and 1.15
-                    float dynamicIntensity = m_DirectionalLight->GetIntensity() * intensityVariation;
-                    
-                    LGE::Math::Vector3 lightColor = m_DirectionalLight->GetColor();
-                    shader->SetUniform3f("u_LightDirection", lightDir.x, lightDir.y, lightDir.z);
-                    shader->SetUniform3f("u_LightColor", lightColor.x, lightColor.y, lightColor.z);
-                    shader->SetUniform1f("u_LightIntensity", dynamicIntensity);
-                }
-                
-                // Set view position for specular lighting
-                LGE::Math::Vector3 viewPos = m_Camera->GetPosition();
-                shader->SetUniform3f("u_ViewPos", viewPos.x, viewPos.y, viewPos.z);
-                
-                // Material properties are already set by material->Bind()
-                // But we need to set the use vertex color flag
-                shader->SetUniform1i("u_UseVertexColor", 0); // Use material color, not vertex color
-                
-                m_VertexArray->Bind();
-                // Draw cube: 6 faces * 2 triangles * 3 vertices = 36 vertices
-                glDrawArrays(GL_TRIANGLES, 0, 36);
-                m_VertexArray->Unbind();
-                if (materialComp) {
-                    materialComp->GetMaterial()->Unbind();
-                } else {
-                    material->Unbind();
-                }
-            }
+            // Render GameObjects from scene
+            // Scene rendering will be implemented when scene loading is complete
             
             // ImGuizmo is rendered in OnUIRender, not here
             
@@ -441,11 +458,6 @@ public:
         m_Toolbar.reset();
         m_MainMenuBar.reset();
         m_SceneViewport.reset();
-        m_GridMaterial.reset();
-        m_LitMaterial.reset();
-        m_Shader.reset();
-        m_VertexBuffer.reset();
-        m_VertexArray.reset();
         m_Skybox.reset();
         m_CameraController.reset();
         m_Camera.reset();
@@ -453,12 +465,6 @@ public:
     }
 
 private:
-    std::shared_ptr<LGE::Shader> m_Shader; // Kept for backward compatibility
-    std::shared_ptr<LGE::Material> m_GridMaterial;
-    std::shared_ptr<LGE::Material> m_LitMaterial;
-    std::unique_ptr<LGE::VertexBuffer> m_VertexBuffer;
-    std::unique_ptr<LGE::VertexArray> m_VertexArray;
-    std::shared_ptr<LGE::GameObject> m_CubeObject; // GameObject for the cube
     std::vector<std::shared_ptr<LGE::GameObject>> m_GameObjects; // All GameObjects in the scene
     std::unique_ptr<LGE::Camera> m_Camera;
     std::unique_ptr<LGE::CameraController> m_CameraController;
@@ -469,11 +475,169 @@ private:
     std::unique_ptr<LGE::Hierarchy> m_Hierarchy;
     std::unique_ptr<LGE::Inspector> m_Inspector;
     std::unique_ptr<LGE::ContentBrowser> m_ContentBrowser;
+    std::unique_ptr<LGE::AssetManager> m_AssetManager;
     std::unique_ptr<LGE::Toolbar> m_Toolbar;
     std::unique_ptr<LGE::MainMenuBar> m_MainMenuBar;
+    std::unique_ptr<LGE::ProjectBrowser> m_ProjectBrowser;
+    std::unique_ptr<LGE::SplashScreen> m_SplashScreen;
+    
+    // Project state
+    bool m_ProjectLoaded;
+    std::string m_CurrentProjectPath;
+    std::string m_CurrentScenePath; // Path to the current scene file
+    
+    // Save scene dialog state
+    bool m_ShowSaveSceneDialog = false;
+    char m_SceneNameBuffer[256] = "SampleScene";
     
     // Animation time
     float m_Time = 0.0f;
+    
+    // Save scene dialog
+    void ShowSaveSceneDialog() {
+        if (m_CurrentScenePath.empty()) {
+            // If no scene is loaded, use default name
+            strncpy_s(m_SceneNameBuffer, "SampleScene", sizeof(m_SceneNameBuffer) - 1);
+        } else {
+            // Extract scene name from current path
+            std::filesystem::path scenePath(m_CurrentScenePath);
+            std::string sceneName = scenePath.stem().string();
+            strncpy_s(m_SceneNameBuffer, sceneName.c_str(), sizeof(m_SceneNameBuffer) - 1);
+        }
+        m_SceneNameBuffer[sizeof(m_SceneNameBuffer) - 1] = '\0';
+        m_ShowSaveSceneDialog = true;
+        ImGui::OpenPopup("Save Scene");
+    }
+    
+    void RenderSaveSceneDialog() {
+        if (!m_ShowSaveSceneDialog) return;
+        
+        ImVec2 center = ImGui::GetMainViewport()->GetCenter();
+        ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
+        ImGui::SetNextWindowSize(ImVec2(400, 150), ImGuiCond_Appearing);
+        
+        if (ImGui::BeginPopupModal("Save Scene", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
+            ImGui::Text("Enter scene name:");
+            ImGui::Spacing();
+            
+            ImGui::PushItemWidth(350.0f);
+            if (ImGui::InputText("##SceneName", m_SceneNameBuffer, sizeof(m_SceneNameBuffer))) {
+                // Text changed
+            }
+            ImGui::PopItemWidth();
+            
+            ImGui::Spacing();
+            ImGui::Separator();
+            ImGui::Spacing();
+            
+            // Buttons
+            float buttonWidth = 80.0f;
+            float spacing = ImGui::GetStyle().ItemSpacing.x;
+            float totalWidth = buttonWidth * 2 + spacing;
+            float startX = (ImGui::GetWindowWidth() - totalWidth) * 0.5f;
+            
+            ImGui::SetCursorPosX(startX);
+            
+            if (ImGui::Button("Cancel", ImVec2(buttonWidth, 0))) {
+                m_ShowSaveSceneDialog = false;
+                ImGui::CloseCurrentPopup();
+            }
+            
+            ImGui::SameLine();
+            
+            ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.25f, 0.50f, 0.75f, 1.0f));
+            ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.30f, 0.55f, 0.80f, 1.0f));
+            ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.20f, 0.45f, 0.70f, 1.0f));
+            
+            if (ImGui::Button("Save", ImVec2(buttonWidth, 0))) {
+                SaveScene();
+                m_ShowSaveSceneDialog = false;
+                ImGui::CloseCurrentPopup();
+            }
+            
+            ImGui::PopStyleColor(3);
+            
+            // Close on Escape
+            if (ImGui::IsKeyPressed(ImGuiKey_Escape)) {
+                m_ShowSaveSceneDialog = false;
+                ImGui::CloseCurrentPopup();
+            }
+            
+            ImGui::EndPopup();
+        } else {
+            // If popup is not open, reset the flag
+            m_ShowSaveSceneDialog = false;
+        }
+    }
+    
+    void SaveScene() {
+        if (m_CurrentProjectPath.empty()) {
+            LGE::Log::Error("ExampleApp: Cannot save scene - no project loaded");
+            return;
+        }
+        
+        std::string sceneName = std::string(m_SceneNameBuffer);
+        if (sceneName.empty()) {
+            LGE::Log::Error("ExampleApp: Cannot save scene - scene name is empty");
+            return;
+        }
+        
+        // Ensure scene name doesn't have extension
+        if (sceneName.find(".scene") != std::string::npos) {
+            sceneName = sceneName.substr(0, sceneName.find(".scene"));
+        }
+        
+        // Create Scenes directory if it doesn't exist
+        std::filesystem::path scenesPath = std::filesystem::path(m_CurrentProjectPath) / "Assets" / "Scenes";
+        if (!std::filesystem::exists(scenesPath)) {
+            std::filesystem::create_directories(scenesPath);
+        }
+        
+        // Create scene file path
+        std::filesystem::path sceneFilePath = scenesPath / (sceneName + ".scene");
+        
+        // If the scene name is "SampleScene" and it already exists, prompt to rename
+        // Otherwise, save the scene
+        try {
+            // Generate scene content (for now, just save the current scene structure)
+            std::ofstream sceneFile(sceneFilePath);
+            if (sceneFile.is_open()) {
+                sceneFile << "{\n";
+                sceneFile << "  \"Name\": \"" << sceneName << "\",\n";
+                sceneFile << "  \"Type\": \"Scene\",\n";
+                sceneFile << "  \"GameObjects\": [],\n";
+                sceneFile << "  \"Camera\": {\n";
+                sceneFile << "    \"Position\": [0.0, 0.0, 3.0],\n";
+                sceneFile << "    \"Target\": [0.0, 0.0, 0.0],\n";
+                sceneFile << "    \"FOV\": 45.0\n";
+                sceneFile << "  },\n";
+                sceneFile << "  \"Lighting\": {\n";
+                sceneFile << "    \"DirectionalLight\": {\n";
+                sceneFile << "      \"Direction\": [0.3, -0.8, 0.5],\n";
+                sceneFile << "      \"Color\": [1.0, 0.98, 0.95],\n";
+                sceneFile << "      \"Intensity\": 0.8\n";
+                sceneFile << "    }\n";
+                sceneFile << "  }\n";
+                sceneFile << "}\n";
+                sceneFile.close();
+                
+                // Update current scene path
+                m_CurrentScenePath = std::filesystem::absolute(sceneFilePath).string();
+                std::replace(m_CurrentScenePath.begin(), m_CurrentScenePath.end(), '\\', '/');
+                
+                LGE::Log::Info("ExampleApp: Saved scene: " + m_CurrentScenePath);
+                
+                // Rescan assets if asset manager is available
+                if (m_AssetManager) {
+                    m_AssetManager->ScanAssets();
+                }
+            } else {
+                LGE::Log::Error("ExampleApp: Failed to create scene file: " + sceneFilePath.string());
+            }
+        } catch (const std::exception& e) {
+            LGE::Log::Error("ExampleApp: Failed to save scene: " + std::string(e.what()));
+        }
+    }
 };
 
 int main() {

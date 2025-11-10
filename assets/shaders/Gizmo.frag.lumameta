@@ -1,0 +1,11 @@
+{
+  "Name": "Gizmo",
+  "Path": "Assets\shaders\Gizmo.frag",
+  "RelativePath": "shaders/Gizmo.frag",
+  "Type": "Shader",
+  "ImportTime": 1762729461,
+  "ModifyTime": 1762729461,
+  "Importer": "",
+  "SourceFile": "",
+  "GUID": "6631908589420702042"
+}

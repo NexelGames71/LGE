@@ -23,7 +23,9 @@ void MainMenuBar::OnUIRender() {
                 // Open scene
             }
             if (ImGui::MenuItem("Save Scene")) {
-                // Save scene
+                if (m_OnSaveScene) {
+                    m_OnSaveScene();
+                }
             }
             ImGui::Separator();
             if (ImGui::MenuItem("Exit")) {

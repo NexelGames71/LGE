@@ -10,7 +10,7 @@ public:
     CameraController(Camera* camera);
     ~CameraController() = default;
 
-    void OnUpdate(float deltaTime);
+    void OnUpdate(float deltaTime, bool viewportFocused = false, bool viewportHovered = false);
     void OnWindowResize(uint32_t width, uint32_t height);
 
     void SetMovementSpeed(float speed) { m_MovementSpeed = speed; }

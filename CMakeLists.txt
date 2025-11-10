@@ -67,6 +67,8 @@ set(UI_SOURCES
     src/ui/Toolbar.cpp
     src/ui/MainMenuBar.cpp
     src/ui/Details.cpp
+    src/ui/ProjectBrowser.cpp
+    src/ui/SplashScreen.cpp
 )
 
 # ImGui sources
@@ -88,12 +90,26 @@ set(MATH_SOURCES
     src/math/Matrix.cpp
 )
 
+set(ASSETS_SOURCES
+    src/assets/AssetMeta.cpp
+    src/assets/FileSystemWatcher.cpp
+    src/assets/ImporterRegistry.cpp
+    src/assets/TextureImporter.cpp
+    src/assets/AssetMetadata.cpp
+    src/assets/ThumbnailGenerator.cpp
+    src/assets/AssetManager.cpp
+    src/assets/AssetFactory.cpp
+    src/assets/ExporterRegistry.cpp
+    src/assets/TextureExporter.cpp
+)
+
 # Create LGE library
 add_library(LGE STATIC
     ${CORE_SOURCES}
     ${RENDERING_SOURCES}
     ${MATH_SOURCES}
     ${UI_SOURCES}
+    ${ASSETS_SOURCES}
     ${IMGUI_SOURCES}
     ${IMGUIZMO_SOURCES}
 )

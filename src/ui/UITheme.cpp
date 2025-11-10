@@ -11,69 +11,69 @@ void UITheme::ApplyModernTheme() {
 void UITheme::SetupColors() {
     ImVec4* colors = ImGui::GetStyle().Colors;
     
-    // Modern dark theme with blue accents (Unreal/Unity style)
+    // Highly metallic dark theme with Unreal Engine style - strong metallic blue/green tints
     
-    // Window
-    colors[ImGuiCol_WindowBg] = ImVec4(0.15f, 0.15f, 0.17f, 1.00f);           // Dark gray background
-    colors[ImGuiCol_ChildBg] = ImVec4(0.12f, 0.12f, 0.14f, 1.00f);            // Slightly darker for child windows
-    colors[ImGuiCol_PopupBg] = ImVec4(0.18f, 0.18f, 0.20f, 1.00f);            // Popup background
+    // Window - darker with strong metallic blue/green tint
+    colors[ImGuiCol_WindowBg] = ImVec4(0.08f, 0.10f, 0.12f, 1.00f);           // Dark metallic background
+    colors[ImGuiCol_ChildBg] = ImVec4(0.06f, 0.08f, 0.10f, 1.00f);            // Slightly darker metallic
+    colors[ImGuiCol_PopupBg] = ImVec4(0.10f, 0.12f, 0.14f, 1.00f);            // Popup with strong metallic tint
     
-    // Borders
-    colors[ImGuiCol_Border] = ImVec4(0.25f, 0.25f, 0.28f, 1.00f);             // Subtle border
-    colors[ImGuiCol_BorderShadow] = ImVec4(0.00f, 0.00f, 0.00f, 0.00f);      // No shadow
+    // Borders - strong metallic blue/green tint for highly reflective look
+    colors[ImGuiCol_Border] = ImVec4(0.28f, 0.38f, 0.45f, 1.00f);             // Strong metallic blue border
+    colors[ImGuiCol_BorderShadow] = ImVec4(0.08f, 0.12f, 0.16f, 0.40f);      // Metallic shadow
     
-    // Frame (inputs, buttons)
-    colors[ImGuiCol_FrameBg] = ImVec4(0.20f, 0.20f, 0.23f, 1.00f);           // Input background
-    colors[ImGuiCol_FrameBgHovered] = ImVec4(0.25f, 0.25f, 0.28f, 1.00f);    // Hover state
-    colors[ImGuiCol_FrameBgActive] = ImVec4(0.30f, 0.30f, 0.33f, 1.00f);     // Active state
+    // Frame (inputs, buttons) - highly metallic appearance
+    colors[ImGuiCol_FrameBg] = ImVec4(0.12f, 0.16f, 0.20f, 1.00f);           // Metallic input background
+    colors[ImGuiCol_FrameBgHovered] = ImVec4(0.20f, 0.28f, 0.35f, 1.00f);    // Bright metallic on hover
+    colors[ImGuiCol_FrameBgActive] = ImVec4(0.28f, 0.36f, 0.42f, 1.00f);     // Active metallic state
     
-    // Title bar
-    colors[ImGuiCol_TitleBg] = ImVec4(0.10f, 0.10f, 0.12f, 1.00f);            // Inactive title
-    colors[ImGuiCol_TitleBgActive] = ImVec4(0.12f, 0.12f, 0.14f, 1.00f);      // Active title
-    colors[ImGuiCol_TitleBgCollapsed] = ImVec4(0.10f, 0.10f, 0.12f, 1.00f);   // Collapsed title
+    // Title bar - darker metallic
+    colors[ImGuiCol_TitleBg] = ImVec4(0.06f, 0.08f, 0.10f, 1.00f);            // Inactive metallic title
+    colors[ImGuiCol_TitleBgActive] = ImVec4(0.08f, 0.10f, 0.12f, 1.00f);      // Active metallic title
+    colors[ImGuiCol_TitleBgCollapsed] = ImVec4(0.06f, 0.08f, 0.10f, 1.00f);   // Collapsed metallic title
     
-    // Menu bar
-    colors[ImGuiCol_MenuBarBg] = ImVec4(0.12f, 0.12f, 0.14f, 1.00f);
+    // Menu bar - metallic appearance
+    colors[ImGuiCol_MenuBarBg] = ImVec4(0.08f, 0.10f, 0.12f, 1.00f);
     
-    // Scrollbar
-    colors[ImGuiCol_ScrollbarBg] = ImVec4(0.10f, 0.10f, 0.12f, 1.00f);
-    colors[ImGuiCol_ScrollbarGrab] = ImVec4(0.30f, 0.30f, 0.33f, 1.00f);
-    colors[ImGuiCol_ScrollbarGrabHovered] = ImVec4(0.35f, 0.35f, 0.38f, 1.00f);
-    colors[ImGuiCol_ScrollbarGrabActive] = ImVec4(0.40f, 0.40f, 0.43f, 1.00f);
+    // Scrollbar - strong metallic blue tint
+    colors[ImGuiCol_ScrollbarBg] = ImVec4(0.06f, 0.08f, 0.10f, 1.00f);
+    colors[ImGuiCol_ScrollbarGrab] = ImVec4(0.32f, 0.42f, 0.50f, 1.00f);
+    colors[ImGuiCol_ScrollbarGrabHovered] = ImVec4(0.40f, 0.50f, 0.58f, 1.00f);
+    colors[ImGuiCol_ScrollbarGrabActive] = ImVec4(0.48f, 0.58f, 0.66f, 1.00f);
     
-    // Buttons
-    colors[ImGuiCol_Button] = ImVec4(0.25f, 0.25f, 0.28f, 1.00f);
-    colors[ImGuiCol_ButtonHovered] = ImVec4(0.30f, 0.30f, 0.33f, 1.00f);
-    colors[ImGuiCol_ButtonActive] = ImVec4(0.35f, 0.35f, 0.38f, 1.00f);
+    // Buttons - highly metallic appearance
+    colors[ImGuiCol_Button] = ImVec4(0.14f, 0.18f, 0.22f, 1.00f);
+    colors[ImGuiCol_ButtonHovered] = ImVec4(0.24f, 0.32f, 0.40f, 1.00f);
+    colors[ImGuiCol_ButtonActive] = ImVec4(0.32f, 0.40f, 0.48f, 1.00f);
     
-    // Header (collapsing headers, selectable headers)
-    colors[ImGuiCol_Header] = ImVec4(0.22f, 0.22f, 0.25f, 1.00f);
-    colors[ImGuiCol_HeaderHovered] = ImVec4(0.28f, 0.28f, 0.32f, 1.00f);
-    colors[ImGuiCol_HeaderActive] = ImVec4(0.35f, 0.35f, 0.40f, 1.00f);
+    // Header (collapsing headers, selectable headers) - highly metallic
+    colors[ImGuiCol_Header] = ImVec4(0.12f, 0.16f, 0.20f, 1.00f);
+    colors[ImGuiCol_HeaderHovered] = ImVec4(0.22f, 0.30f, 0.38f, 1.00f);
+    colors[ImGuiCol_HeaderActive] = ImVec4(0.30f, 0.38f, 0.46f, 1.00f);
     
-    // Separator
-    colors[ImGuiCol_Separator] = ImVec4(0.25f, 0.25f, 0.28f, 1.00f);
-    colors[ImGuiCol_SeparatorHovered] = ImVec4(0.30f, 0.30f, 0.33f, 1.00f);
-    colors[ImGuiCol_SeparatorActive] = ImVec4(0.35f, 0.35f, 0.38f, 1.00f);
+    // Separator - strong metallic blue tint
+    colors[ImGuiCol_Separator] = ImVec4(0.24f, 0.32f, 0.40f, 1.00f);
+    colors[ImGuiCol_SeparatorHovered] = ImVec4(0.32f, 0.40f, 0.48f, 1.00f);
+    colors[ImGuiCol_SeparatorActive] = ImVec4(0.40f, 0.48f, 0.56f, 1.00f);
     
-    // Resize grip
-    colors[ImGuiCol_ResizeGrip] = ImVec4(0.30f, 0.30f, 0.33f, 0.50f);
-    colors[ImGuiCol_ResizeGripHovered] = ImVec4(0.40f, 0.40f, 0.43f, 0.70f);
-    colors[ImGuiCol_ResizeGripActive] = ImVec4(0.50f, 0.50f, 0.53f, 1.00f);
+    // Resize grip - highly metallic
+    colors[ImGuiCol_ResizeGrip] = ImVec4(0.28f, 0.36f, 0.44f, 0.60f);
+    colors[ImGuiCol_ResizeGripHovered] = ImVec4(0.38f, 0.46f, 0.54f, 0.80f);
+    colors[ImGuiCol_ResizeGripActive] = ImVec4(0.48f, 0.56f, 0.64f, 1.00f);
     
-    // Tabs
-    colors[ImGuiCol_Tab] = ImVec4(0.18f, 0.18f, 0.20f, 1.00f);
-    colors[ImGuiCol_TabHovered] = ImVec4(0.25f, 0.25f, 0.28f, 1.00f);
-    colors[ImGuiCol_TabActive] = ImVec4(0.22f, 0.22f, 0.25f, 1.00f);
-    colors[ImGuiCol_TabUnfocused] = ImVec4(0.15f, 0.15f, 0.17f, 1.00f);
-    colors[ImGuiCol_TabUnfocusedActive] = ImVec4(0.18f, 0.18f, 0.20f, 1.00f);
+    // Tabs - highly metallic appearance
+    colors[ImGuiCol_Tab] = ImVec4(0.10f, 0.14f, 0.18f, 1.00f);
+    colors[ImGuiCol_TabHovered] = ImVec4(0.20f, 0.28f, 0.36f, 1.00f);
+    colors[ImGuiCol_TabActive] = ImVec4(0.16f, 0.22f, 0.28f, 1.00f);
+    colors[ImGuiCol_TabUnfocused] = ImVec4(0.08f, 0.11f, 0.14f, 1.00f);
+    colors[ImGuiCol_TabUnfocusedActive] = ImVec4(0.10f, 0.14f, 0.18f, 1.00f);
     
-    // Table
-    colors[ImGuiCol_TableHeaderBg] = ImVec4(0.12f, 0.12f, 0.14f, 1.00f);
-    colors[ImGuiCol_TableBorderStrong] = ImVec4(0.25f, 0.25f, 0.28f, 1.00f);
-    colors[ImGuiCol_TableBorderLight] = ImVec4(0.20f, 0.20f, 0.23f, 1.00f);
+    // Table - highly metallic
+    colors[ImGuiCol_TableHeaderBg] = ImVec4(0.08f, 0.10f, 0.12f, 1.00f);
+    colors[ImGuiCol_TableBorderStrong] = ImVec4(0.26f, 0.34f, 0.42f, 1.00f);
+    colors[ImGuiCol_TableBorderLight] = ImVec4(0.18f, 0.24f, 0.30f, 1.00f);
     colors[ImGuiCol_TableRowBg] = ImVec4(0.00f, 0.00f, 0.00f, 0.00f);
-    colors[ImGuiCol_TableRowBgAlt] = ImVec4(0.12f, 0.12f, 0.14f, 0.50f);
+    colors[ImGuiCol_TableRowBgAlt] = ImVec4(0.08f, 0.10f, 0.12f, 0.50f);
     
     // Text
     colors[ImGuiCol_Text] = ImVec4(0.95f, 0.95f, 0.97f, 1.00f);               // Almost white text

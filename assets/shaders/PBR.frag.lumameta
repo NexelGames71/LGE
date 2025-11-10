@@ -1,0 +1,11 @@
+{
+  "Name": "PBR",
+  "Path": "Assets\shaders\PBR.frag",
+  "RelativePath": "shaders/PBR.frag",
+  "Type": "Shader",
+  "ImportTime": 1762729461,
+  "ModifyTime": 1762729461,
+  "Importer": "",
+  "SourceFile": "",
+  "GUID": "14490081060398335160"
+}

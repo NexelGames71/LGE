@@ -42,10 +42,16 @@ CameraController::CameraController(Camera* camera)
     }
 }
 
-void CameraController::OnUpdate(float deltaTime) {
-    ProcessKeyboard(deltaTime);
-    ProcessMouse(deltaTime);
-    ProcessScroll(deltaTime);
+void CameraController::OnUpdate(float deltaTime, bool viewportFocused, bool viewportHovered) {
+    // Only process input if viewport is focused and hovered
+    if (viewportFocused && viewportHovered) {
+        ProcessKeyboard(deltaTime);
+        ProcessMouse(deltaTime);
+        ProcessScroll(deltaTime);
+    } else {
+        // Reset first mouse flag when viewport loses focus
+        m_FirstMouse = true;
+    }
 }
 
 void CameraController::OnWindowResize(uint32_t width, uint32_t height) {
@@ -57,6 +63,11 @@ void CameraController::OnWindowResize(uint32_t width, uint32_t height) {
 
 void CameraController::ProcessKeyboard(float deltaTime) {
     if (!m_Camera) return;
+    
+    // Only allow movement when right mouse button is held
+    if (!Input::IsMouseButtonPressed(GLFW_MOUSE_BUTTON_RIGHT)) {
+        return;
+    }
 
     Math::Vector3 position = m_Camera->GetPosition();
     Math::Vector3 target = m_Camera->GetTarget();
@@ -96,7 +107,7 @@ void CameraController::ProcessKeyboard(float deltaTime) {
     Math::Vector3 movement(0.0f, 0.0f, 0.0f);
     float speed = m_MovementSpeed * deltaTime;
     
-    // WASD movement
+    // WASD movement (only when right mouse is held)
     if (Input::IsKeyPressed(GLFW_KEY_W)) {
         movement = movement + forward * speed;
     }

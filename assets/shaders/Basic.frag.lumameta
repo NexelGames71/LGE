@@ -1,0 +1,11 @@
+{
+  "Name": "Basic",
+  "Path": "Assets\shaders\Basic.frag",
+  "RelativePath": "shaders/Basic.frag",
+  "Type": "Shader",
+  "ImportTime": 1762729461,
+  "ModifyTime": 1762729461,
+  "Importer": "",
+  "SourceFile": "",
+  "GUID": "16982220745533152898"
+}
