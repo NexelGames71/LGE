@@ -1,0 +1,14 @@
+<map id="ExampleApp::Shutdown" name="ExampleApp::Shutdown">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,167,83"/>
+<area shape="rect" id="Node000002" href="$namespaceLGE_1_1EditorBus.html#a3c9491beeaaf4b880411d45aecf888e6" title=" " alt="" coords="233,5,384,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,53,231,33,232,39,149,58"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1Application.html#a0ade72b35c9529406f7650156968813f" title=" " alt="" coords="216,107,401,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,81,232,100,231,105,147,86"/>
+<area shape="rect" id="Node000006" href="$namespaceLGE_1_1ThreadPool.html#a1e02ab4b847873210025bbb4524e5380" title=" " alt="" coords="215,56,402,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="167,67,199,67,199,72,167,72"/>
+<area shape="rect" id="Node000004" href="$classLGE_1_1Log.html#ab0265ee050b8873a2fd31fbdb696ced0" title=" " alt="" coords="464,56,571,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="366,103,449,83,450,88,367,109"/>
+<area shape="rect" id="Node000005" href="$classLGE_1_1UI.html#a9684e81b95e3586446017c107e0798dc" title=" " alt="" coords="450,107,585,133"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="402,117,435,117,435,123,402,123"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="402,67,449,67,449,72,402,72"/>
+</map>

@@ -1,0 +1,23 @@
+<map id="LGE::SearchQuery::MaxResults" name="LGE::SearchQuery::MaxResults">
+<area shape="rect" id="Node000001" title=" " alt="" coords="325,132,534,159"/>
+<area shape="rect" id="Node000002" href="$namespaceLGE_1_1Search.html#a986ef43372fd62cf1c0880fb0025804e" title=" " alt="" coords="119,5,267,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="398,124,343,85,276,46,247,35,249,30,278,42,346,80,401,120"/>
+<area shape="rect" id="Node000003" href="$namespaceLGE_1_1Search.html#ae0069f2eac2970bc78f0f8725f450eb0" title=" " alt="" coords="119,56,267,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="373,129,276,97,240,86,241,81,278,92,374,124"/>
+<area shape="rect" id="Node000005" href="$namespaceLGE_1_1Search.html#a7d936a851b082cc41474bf6bad6c2fe8" title=" " alt="" coords="109,107,277,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="309,135,277,132,278,126,310,130"/>
+<area shape="rect" id="Node000006" href="$namespaceLGE_1_1Search.html#a075f20f5304570afa55e5ef522765e72" title=" " alt="" coords="117,157,268,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="310,161,269,165,269,160,309,156"/>
+<area shape="rect" id="Node000008" href="$TestSearch_8cpp.html#a13cb3cdd7534423f0d92329cf16ceaf7" title=" " alt="" coords="165,208,220,235"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="374,167,278,199,222,216,220,211,276,193,373,161"/>
+<area shape="rect" id="Node000009" href="$namespaceLGE_1_1Search.html#ae1b3505236cfc60a02f36a0c1a06d9bd" title=" " alt="" coords="128,259,258,285"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="401,171,346,210,278,249,249,261,247,256,276,244,343,206,398,166"/>
+<area shape="rect" id="Node000004" href="$TestSearch_8cpp.html#aec262fa1aeb82f0a2ec9fca22e3d2374" title=" " alt="" coords="5,56,61,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="104,72,61,72,61,67,104,67"/>
+<area shape="rect" id="Node000007" href="$TestSearch_8cpp.html#ad770bade109d5488d8747315303c5509" title=" " alt="" coords="5,157,61,184"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="102,173,61,173,61,168,102,168"/>
+<area shape="rect" id="Node000010" href="$TestSearch_8cpp.html#a726a0578ed58faaeb0201d967dbce4be" title=" " alt="" coords="5,233,61,260"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="112,262,61,254,61,248,113,257"/>
+<area shape="rect" id="Node000011" href="$TestSearch_8cpp.html#a7120a1bbfb46623c11b708a8ab750d82" title=" " alt="" coords="5,284,61,311"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="113,287,61,296,61,290,112,282"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="LGE::Application::~Application" name="LGE::Application::~Application">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,133,65"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Application.html#a0ade72b35c9529406f7650156968813f" title=" " alt="" coords="181,31,366,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,41,165,41,165,47,133,47"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1Log.html#ab0265ee050b8873a2fd31fbdb696ced0" title=" " alt="" coords="428,5,535,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="366,30,413,24,413,30,366,35"/>
+<area shape="rect" id="Node000004" href="$classLGE_1_1UI.html#a9684e81b95e3586446017c107e0798dc" title=" " alt="" coords="414,56,549,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="366,53,399,57,399,62,366,58"/>
+</map>

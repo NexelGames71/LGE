@@ -1,0 +1,13 @@
+<map id="LGE::SearchQuery::Text" name="LGE::SearchQuery::Text">
+<area shape="rect" id="Node000001" title=" " alt="" coords="286,56,450,83"/>
+<area shape="rect" id="Node000002" href="$TestSearch_8cpp.html#a33500ac4fe5ec5aabbfb97635e04b1a5" title=" " alt="" coords="146,5,201,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="299,54,201,28,202,23,300,49"/>
+<area shape="rect" id="Node000003" href="$TestSearch_8cpp.html#a13cb3cdd7534423f0d92329cf16ceaf7" title=" " alt="" coords="146,56,201,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="270,72,201,72,201,67,270,67"/>
+<area shape="rect" id="Node000004" href="$namespaceLGE_1_1Search.html#ae1b3505236cfc60a02f36a0c1a06d9bd" title=" " alt="" coords="109,107,238,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="300,90,228,109,227,103,298,85"/>
+<area shape="rect" id="Node000005" href="$TestSearch_8cpp.html#a726a0578ed58faaeb0201d967dbce4be" title=" " alt="" coords="5,81,61,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="93,108,61,102,62,97,94,103"/>
+<area shape="rect" id="Node000006" href="$TestSearch_8cpp.html#a7120a1bbfb46623c11b708a8ab750d82" title=" " alt="" coords="5,132,61,159"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="94,137,62,143,61,138,93,132"/>
+</map>

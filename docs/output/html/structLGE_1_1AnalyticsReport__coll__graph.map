@@ -1,0 +1,11 @@
+<map id="LGE::AnalyticsReport" name="LGE::AnalyticsReport">
+<area shape="rect" id="Node000001" title=" " alt="" coords="34,436,183,463"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,295,212,321"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,337,111,436,106,436,106,337"/>
+<area shape="rect" id="Node000003" href="$structLGE_1_1AssetStats.html" title=" " alt="" coords="48,196,169,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="111,238,111,294,106,294,106,238"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="69,97,148,124"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="111,140,111,196,106,196,106,140"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="46,5,171,48"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="111,64,111,97,106,97,106,64"/>
+</map>

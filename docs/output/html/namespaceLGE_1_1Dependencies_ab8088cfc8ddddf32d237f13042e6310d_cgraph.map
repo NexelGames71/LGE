@@ -1,0 +1,20 @@
+<map id="LGE::Dependencies::ValidateReference" name="LGE::Dependencies::ValidateReference">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,60,152,103"/>
+<area shape="rect" id="Node000002" href="$namespaceLGE_1_1AssetRegistry.html#a9e672f9e3c8c62076b9156d1695e48b8" title=" " alt="" coords="440,5,578,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,57,199,45,317,31,424,25,424,31,317,37,200,51,150,62"/>
+<area shape="rect" id="Node000003" href="$namespaceLGE_1_1AssetRegistry.html#ac315fdb87be485fe8103d455b7e8a464" title=" " alt="" coords="225,60,363,103"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,79,209,79,209,84,152,84"/>
+<area shape="rect" id="Node000004" href="$namespaceLGE_1_1VFS.html#a9eb41e42c96a4f5358c79e30afb579cc" title=" " alt="" coords="200,127,388,153"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="153,99,200,112,228,120,226,125,199,117,151,104"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="363,61,424,45,426,51,364,66"/>
+<area shape="rect" id="Node000005" href="$namespaceLGE_1_1VFS.html#a0566c02123208c6b867418e914f9574b" title=" " alt="" coords="436,76,582,103"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="353,123,434,104,435,109,354,129"/>
+<area shape="rect" id="Node000006" href="$namespaceLGE_1_1LxPath.html#a94ec3bdfd6948ddc25cda5d18154d4cf" title=" " alt="" coords="445,127,573,153"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="388,137,429,137,429,143,388,143"/>
+<area shape="rect" id="Node000009" href="$classLGE_1_1Log.html#aa6f98018af29c23dd7f574d3df5dda5e" title=" " alt="" coords="452,177,566,204"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="354,151,438,171,436,176,353,157"/>
+<area shape="rect" id="Node000007" href="$namespaceLGE_1_1LxPath.html#a314a60ce690c90f4ee0b4e64c0199408" title=" " alt="" coords="630,127,794,153"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="574,137,615,137,615,143,574,143"/>
+<area shape="rect" id="Node000008" href="$classLGE_1_1Log.html#a53f3f4b8797ffd18145739c9e66d690a" title=" " alt="" coords="842,127,954,153"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="794,137,826,137,826,143,794,143"/>
+</map>

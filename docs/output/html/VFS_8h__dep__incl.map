@@ -1,0 +1,33 @@
+<map id="VFS.h" name="VFS.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="995,5,1053,32"/>
+<area shape="rect" id="Node000002" href="$AssetRegistry_8cpp.html" title=" " alt="" coords="5,80,134,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="979,24,633,42,392,59,146,83,134,84,134,79,145,77,392,54,633,37,979,19"/>
+<area shape="rect" id="Node000003" href="$BenchmarkFS_8cpp.html" title=" " alt="" coords="158,80,288,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="980,25,693,45,498,62,299,83,288,84,288,79,299,77,497,56,692,40,979,20"/>
+<area shape="rect" id="Node000004" href="$Dependencies_8cpp.html" title=" " alt="" coords="312,80,441,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="980,26,754,48,452,83,442,84,441,79,452,77,754,43,980,21"/>
+<area shape="rect" id="Node000005" href="$FSOps_8cpp.html" title=" " alt="" coords="464,80,552,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="979,27,797,48,563,83,553,85,552,79,562,77,797,43,979,22"/>
+<area shape="rect" id="Node000006" href="$FSWatch_8cpp.html" title=" " alt="" coords="575,80,676,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="980,30,687,83,676,85,675,79,686,77,979,25"/>
+<area shape="rect" id="Node000007" href="$FileIO_8cpp.html" title=" " alt="" coords="700,80,781,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="981,34,782,84,781,79,980,29"/>
+<area shape="rect" id="Node000008" href="$ImportExport_8cpp.html" title=" " alt="" coords="805,80,926,107"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="984,41,894,82,892,77,982,36"/>
+<area shape="rect" id="Node000009" href="$fs_2PackageManager_8cpp.html" title=" " alt="" coords="950,80,1098,107"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1027,48,1027,80,1022,80,1022,48"/>
+<area shape="rect" id="Node000010" href="$Policies_8cpp.html" title=" " alt="" coords="1122,80,1214,107"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1064,37,1144,77,1142,82,1062,42"/>
+<area shape="rect" id="Node000011" href="$Recycle_8cpp.html" title=" " alt="" coords="1238,80,1333,107"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1069,30,1241,77,1239,82,1067,35"/>
+<area shape="rect" id="Node000012" href="$TestDependencies_8cpp.html" title=" " alt="" coords="1356,80,1511,107"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="1069,25,1362,77,1361,82,1068,30"/>
+<area shape="rect" id="Node000013" href="$TestSearch_8cpp.html" title=" " alt="" coords="1535,80,1647,107"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="1069,22,1266,44,1523,77,1535,79,1534,84,1522,83,1265,49,1068,27"/>
+<area shape="rect" id="Node000014" href="$TestVFS_8cpp.html" title=" " alt="" coords="1672,80,1769,107"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="1069,20,1320,39,1489,56,1659,77,1671,79,1671,85,1658,83,1488,61,1320,45,1068,25"/>
+<area shape="rect" id="Node000015" href="$VFS_8cpp.html" title=" " alt="" coords="1793,80,1866,107"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="1069,18,1193,23,1369,33,1574,50,1782,77,1793,80,1792,85,1781,83,1573,55,1369,38,1192,28,1069,24"/>
+<area shape="rect" id="Node000016" href="$main_8cpp.html" title=" " alt="" coords="1890,80,1964,107"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="1069,18,1206,21,1406,30,1640,48,1878,77,1890,80,1889,85,1877,83,1640,54,1406,36,1206,27,1069,23"/>
+</map>

@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['id_0',['id',['../structLGE_1_1PackageInfo.html#a760960518971090d9e9390974ee0141d',1,'LGE::PackageInfo::id'],['../structLGE_1_1Package.html#a7313d4f89b3e3c7790f084349f0dd1cf',1,'LGE::Package::id']]],
+  ['importer_1',['importer',['../structLGE_1_1LxAssetMeta.html#a5cec7495f8abad3112bde9f407fc3844',1,'LGE::LxAssetMeta::importer'],['../structLGE_1_1Meta.html#a4d4e21938d19d93166b0ad6532fd20a8',1,'LGE::Meta::importer']]],
+  ['importtime_2',['importTime',['../structLGE_1_1LxAssetMeta.html#a0327d8322e2c2eee24febd42331ea88b',1,'LGE::LxAssetMeta::importTime'],['../structLGE_1_1ImportResult.html#a6fe3dd048603084a303351b54bad4f41',1,'LGE::ImportResult::importTime']]],
+  ['includeassets_3',['includeAssets',['../structLGE_1_1BackupOptions.html#afbc8e195c554ed8bc492f0db2d50aeac',1,'LGE::BackupOptions']]],
+  ['includedependencies_4',['includeDependencies',['../structLGE_1_1BackupOptions.html#a134375391fbdad87c44aeaee9c2d5536',1,'LGE::BackupOptions::includeDependencies'],['../structLGE_1_1BundleOptions.html#a7ba647ad3b256eaa4dbed3120a87c5a1',1,'LGE::BundleOptions::includeDependencies'],['../structLGE_1_1ExportOptions.html#a695896194b586cbb69de87545a6336ae',1,'LGE::ExportOptions::includeDependencies']]],
+  ['includemetadata_5',['includeMetadata',['../structLGE_1_1BackupOptions.html#af070389ef3216d6302c600ef52b265ee',1,'LGE::BackupOptions::includeMetadata'],['../structLGE_1_1ExportOptions.html#a8a698119b2065847de049f96124112cb',1,'LGE::ExportOptions::includeMetadata']]],
+  ['incremental_6',['incremental',['../structLGE_1_1BackupOptions.html#a9b764b14aa249e5945773c9cd8a80640',1,'LGE::BackupOptions']]],
+  ['installedat_7',['installedAt',['../structLGE_1_1PackageInfo.html#adf0b55d19590f378e2e3df77a408ab78',1,'LGE::PackageInfo']]],
+  ['installpath_8',['installPath',['../structLGE_1_1PackageInfo.html#ab77d3c2ace57566ff7cc6b28c5f5a1cd',1,'LGE::PackageInfo::installPath'],['../structLGE_1_1Package.html#aa08f7503c10c7d06c493226035d5ca61',1,'LGE::Package::installPath']]],
+  ['invalidassets_9',['invalidAssets',['../structLGE_1_1Validation_1_1ValidationStats.html#a57f3b0974082ad93e664e18999ae54c1',1,'LGE::Validation::ValidationStats']]],
+  ['iscached_10',['isCached',['../structLGE_1_1AssetStats.html#ae4c64b6e5d57dfa7ffffb34104253888',1,'LGE::AssetStats']]],
+  ['iscomplete_11',['isComplete',['../structLGE_1_1BackupEntry.html#ad80105699be389197887cff1389f773d',1,'LGE::BackupEntry']]],
+  ['isinstalled_12',['isInstalled',['../structLGE_1_1Package.html#aee059b2798c9ce01f8f3319617dbfbba',1,'LGE::Package']]],
+  ['isloaded_13',['isLoaded',['../structLGE_1_1StreamChunk.html#a375ef2603673fbf3b16b773bc2c387e5',1,'LGE::StreamChunk']]],
+  ['ispinned_14',['isPinned',['../structLGE_1_1CacheEntry.html#a580a14a4562be42ced235681fd7e2e87',1,'LGE::CacheEntry']]],
+  ['isreadonly_15',['isReadOnly',['../structLGE_1_1FileEvent.html#a5c0e8171e2297cb596f5906e08dccaab',1,'LGE::FileEvent::isReadOnly'],['../structLGE_1_1FSWatch_1_1WatchedDirectory.html#a3182a4fe242ce0bbd911297b4a777e21',1,'LGE::FSWatch::WatchedDirectory::isReadOnly']]],
+  ['isreferenced_16',['isReferenced',['../structLGE_1_1AssetStats.html#ae167c2ea439f91588867e5ab7e303e6f',1,'LGE::AssetStats']]],
+  ['issues_17',['issues',['../structLGE_1_1ValidationResult.html#af29e51075fbc9cbf96bcbdcada45595b',1,'LGE::ValidationResult::issues'],['../structLGE_1_1HealthResult.html#aeb672b1701b059fe71f96a238ccb9930',1,'LGE::HealthResult::issues']]],
+  ['iterations_18',['iterations',['../structLGE_1_1Testing_1_1BenchmarkResult.html#aa2cd72699d6efaa06f4be51b919b3102',1,'LGE::Testing::BenchmarkResult::iterations'],['../structLGE_1_1Testing_1_1BenchmarkConfig.html#a58394e6ec18824ed977f83be35d5bc56',1,'LGE::Testing::BenchmarkConfig::iterations']]]
+];

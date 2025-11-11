@@ -1,0 +1,11 @@
+<map id="LGE::Camera::Pan" name="LGE::Camera::Pan">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,43,138,69"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Camera.html#a11d25fd3a204f4506304ab9510eb1762" title=" " alt="" coords="197,13,413,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,45,181,40,182,45,139,50"/>
+<area shape="rect" id="Node000005" href="$classLGE_1_1Camera.html#ad5762d9f21d46ca4961b6371dca6f5db" title=" " alt="" coords="186,64,424,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="139,62,170,66,170,71,138,67"/>
+<area shape="rect" id="Node000003" href="$structLGE_1_1Math_1_1Matrix4.html#af83a1273cd30fbd76f827b132a1c4e94" title=" " alt="" coords="472,5,607,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="413,24,457,24,457,29,413,29"/>
+<area shape="rect" id="Node000004" href="$structLGE_1_1Math_1_1Matrix4.html#a02dc0417ebe852f1ef2ac703f5d5711e" title=" " alt="" coords="655,5,791,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="608,24,640,24,640,29,608,29"/>
+</map>

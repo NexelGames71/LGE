@@ -1,0 +1,9 @@
+<map id="LGE::Testing::BenchmarkRunner::RunBatch" name="LGE::Testing::BenchmarkRunner::RunBatch">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,219,65"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Testing_1_1BenchmarkRunner.html#a4ea9354529160315ad819e25471ea1f5" title=" " alt="" coords="267,31,512,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,41,251,41,251,47,219,47"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1Log.html#ab0265ee050b8873a2fd31fbdb696ced0" title=" " alt="" coords="564,5,670,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="512,28,548,24,549,29,513,33"/>
+<area shape="rect" id="Node000004" href="$classLGE_1_1Log.html#aa6f98018af29c23dd7f574d3df5dda5e" title=" " alt="" coords="560,56,674,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="513,55,545,59,544,64,512,60"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="SplashScreen.h" name="SplashScreen.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="61,5,174,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,59,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,35,60,72,56,68,101,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="83,80,152,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="120,33,120,64,115,64,115,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="175,80,233,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="134,30,179,68,176,72,131,35"/>
+</map>

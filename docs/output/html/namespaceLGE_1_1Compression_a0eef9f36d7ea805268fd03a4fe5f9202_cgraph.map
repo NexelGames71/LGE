@@ -1,0 +1,13 @@
+<map id="LGE::Compression::GetOriginalSize" name="LGE::Compression::GetOriginalSize">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,237,40"/>
+<area shape="rect" id="Node000002" href="$namespaceLGE_1_1Compression.html#a5cb00aa30da7aad66c9fcf19d8ba51e5" title=" " alt="" coords="285,5,487,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,24,269,24,269,29,237,29"/>
+<area shape="rect" id="Node000003" href="$namespaceLGE_1_1LxPath.html#a442709c353add1504cfb1d9d496f3014" title=" " alt="" coords="535,13,718,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="487,24,519,24,519,29,487,29"/>
+<area shape="rect" id="Node000004" href="$namespaceLGE_1_1LxPath.html#a282200340a7ec214f14f5d64e9e41396" title=" " alt="" coords="766,13,945,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="719,24,750,24,750,29,719,29"/>
+<area shape="rect" id="Node000005" href="$namespaceLGE_1_1LxPath.html#a314a60ce690c90f4ee0b4e64c0199408" title=" " alt="" coords="993,13,1156,40"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="945,24,977,24,977,29,945,29"/>
+<area shape="rect" id="Node000006" href="$classLGE_1_1Log.html#a53f3f4b8797ffd18145739c9e66d690a" title=" " alt="" coords="1204,13,1316,40"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1157,24,1189,24,1189,29,1157,29"/>
+</map>

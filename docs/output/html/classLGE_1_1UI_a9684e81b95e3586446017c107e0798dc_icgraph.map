@@ -1,0 +1,11 @@
+<map id="LGE::UI::Shutdown" name="LGE::UI::Shutdown">
+<area shape="rect" id="Node000001" title=" " alt="" coords="545,35,681,61"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Application.html#a0ade72b35c9529406f7650156968813f" title=" " alt="" coords="312,35,497,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="530,51,498,51,498,45,530,45"/>
+<area shape="rect" id="Node000003" href="$classExampleApp.html#a42763ea10d70e4d90fd08e5adeb43511" title=" " alt="" coords="103,5,264,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="296,36,264,32,265,27,297,31"/>
+<area shape="rect" id="Node000005" href="$classLGE_1_1Application.html#a131af0399c9bffb6c373475014a312f9" title=" " alt="" coords="120,56,247,99"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="297,65,248,72,247,66,297,60"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

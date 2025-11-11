@@ -1,0 +1,9 @@
+<map id="LGE::Skybox::Render" name="LGE::Skybox::Render">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,155,107"/>
+<area shape="rect" id="Node000002" href="$structLGE_1_1Math_1_1Matrix4.html#a16cc54a35dce0dd92101cd7df7d29fc8" title=" " alt="" coords="233,5,368,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,77,217,49,219,54,128,82"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1Camera.html#a12253e6a0a0198e80a86e162c2cf27f8" title=" " alt="" coords="206,72,394,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,91,191,91,191,96,155,96"/>
+<area shape="rect" id="Node000004" href="$classLGE_1_1Camera.html#a284141e4933e82c8d1cc8d83be61f11d" title=" " alt="" coords="203,139,398,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="132,105,203,124,231,132,230,137,202,129,131,110"/>
+</map>

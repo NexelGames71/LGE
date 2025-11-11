@@ -1,0 +1,13 @@
+<map id="LGE::Testing::TestFramework::ClearResults" name="LGE::Testing::TestFramework::ClearResults">
+<area shape="rect" id="Node000001" title=" " alt="" coords="346,72,541,115"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Testing_1_1TestFramework.html#ae0186072f2b6274050fd61e4d8ebfe44" title=" " alt="" coords="103,5,298,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="348,70,280,51,282,46,349,65"/>
+<area shape="rect" id="Node000004" href="$classLGE_1_1Testing_1_1TestFramework.html#a149cf9e13d71402c14be137cd8898bc8" title=" " alt="" coords="103,72,298,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="330,96,298,96,298,91,330,91"/>
+<area shape="rect" id="Node000005" href="$classLGE_1_1Testing_1_1TestFramework.html#af0b614528a1df42688fb542dfca07421" title=" " alt="" coords="103,139,298,181"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="349,122,282,141,280,135,348,117"/>
+<area shape="rect" id="Node000003" href="$TestRunner_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,80,55,107"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,56,104,62,56,84,54,79,102,58,118,51"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="87,96,55,96,55,91,87,91"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="118,135,102,129,54,108,56,103,104,124,119,130"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="LGE::Texture::LoadHDRImage" name="LGE::Texture::LoadHDRImage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,206,50"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Log.html#a53f3f4b8797ffd18145739c9e66d690a" title=" " alt="" coords="466,23,578,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,20,253,9,336,3,418,9,461,16,460,22,418,14,336,8,254,14,174,25"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1Texture.html#a12b6e15cc5933afa86ef1364c2d329a5" title=" " alt="" coords="255,98,417,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,48,279,90,277,95,148,53"/>
+<area shape="rect" id="Node000005" href="$classLGE_1_1Texture.html#a71c3fce3209f046c3b01f501ac317ba1" title=" " alt="" coords="254,23,418,50"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="206,34,238,34,238,39,206,39"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="370,95,472,54,474,59,372,100"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="304,99,298,89,302,80,315,73,336,71,358,74,370,80,367,85,357,79,336,77,316,79,306,83,304,89,308,96"/>
+<area shape="rect" id="Node000004" href="$classLGE_1_1Log.html#ab0265ee050b8873a2fd31fbdb696ced0" title=" " alt="" coords="469,86,575,113"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="417,103,453,101,454,106,417,109"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="418,34,450,34,450,39,418,39"/>
+<area shape="poly" id="edge8_Node000005_Node000004" title=" " alt="" coords="384,48,419,59,471,78,469,83,417,64,382,53"/>
+</map>

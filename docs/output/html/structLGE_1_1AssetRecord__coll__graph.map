@@ -1,0 +1,10 @@
+<map id="LGE::AssetRecord" name="LGE::AssetRecord">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,399,137,425"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="31,97,111,124"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,140,64,196,63,251,64,305,72,398,67,399,59,305,57,251,59,196,65,139"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="130,237,295,264"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="96,133,201,235,198,239,92,137"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="8,5,134,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="74,64,74,97,68,97,68,64"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="193,277,84,400,80,397,189,274"/>
+</map>

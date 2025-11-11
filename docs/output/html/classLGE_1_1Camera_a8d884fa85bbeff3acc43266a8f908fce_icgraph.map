@@ -1,0 +1,11 @@
+<map id="LGE::Camera::UpdateProjectionMatrix" name="LGE::Camera::UpdateProjectionMatrix">
+<area shape="rect" id="Node000001" title=" " alt="" coords="257,73,466,116"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Camera.html#a842bfb86269f40482bf133ca862cc4fd" title=" " alt="" coords="29,5,185,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="283,70,208,47,166,35,168,30,209,41,284,65"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1Camera.html#ad4075b70f0c958317eff76cf7b0e54e3" title=" " alt="" coords="29,56,185,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="241,85,185,80,185,74,241,80"/>
+<area shape="rect" id="Node000004" href="$classLGE_1_1Camera.html#aad4df9d93875b8c3f10f862a7b2125bc" title=" " alt="" coords="5,107,209,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="241,109,209,113,209,107,241,104"/>
+<area shape="rect" id="Node000005" href="$classLGE_1_1Camera.html#ab526ae7270ea41978b6c76368d830eae" title=" " alt="" coords="8,157,206,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="284,124,209,148,168,159,166,154,208,143,283,119"/>
+</map>

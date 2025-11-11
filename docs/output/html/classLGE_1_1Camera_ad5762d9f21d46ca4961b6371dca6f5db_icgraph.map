@@ -1,0 +1,25 @@
+<map id="LGE::Camera::UpdateViewProjectionMatrix" name="LGE::Camera::UpdateViewProjectionMatrix">
+<area shape="rect" id="Node000001" title=" " alt="" coords="257,251,495,293"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Camera.html#a842bfb86269f40482bf133ca862cc4fd" title=" " alt="" coords="29,5,185,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="356,238,333,193,300,141,257,90,207,46,184,34,186,30,210,42,261,86,304,138,337,191,361,235"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1Camera.html#ad4075b70f0c958317eff76cf7b0e54e3" title=" " alt="" coords="29,56,185,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="350,240,291,167,251,129,207,97,183,86,185,81,210,92,255,125,295,163,354,236"/>
+<area shape="rect" id="Node000004" href="$classLGE_1_1Camera.html#a060ca8af832029265a1ac071af3821ad" title=" " alt="" coords="36,107,178,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="339,242,280,193,245,169,208,148,177,136,179,131,210,143,248,164,284,189,343,238"/>
+<area shape="rect" id="Node000005" href="$classLGE_1_1Camera.html#a33ef78a211ae82690a64a041b7f86de0" title=" " alt="" coords="41,157,173,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="318,246,265,221,208,199,170,187,172,182,210,193,267,216,320,241"/>
+<area shape="rect" id="Node000006" href="$classLGE_1_1Camera.html#a2c965db23abafe500f48e4d87f63291e" title=" " alt="" coords="33,208,181,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="244,250,181,238,182,233,245,245"/>
+<area shape="rect" id="Node000007" href="$classLGE_1_1Camera.html#aad4df9d93875b8c3f10f862a7b2125bc" title=" " alt="" coords="5,259,209,285"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="241,275,209,275,209,269,241,269"/>
+<area shape="rect" id="Node000008" href="$classLGE_1_1Camera.html#ab526ae7270ea41978b6c76368d830eae" title=" " alt="" coords="8,309,206,336"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="245,299,182,311,181,306,244,294"/>
+<area shape="rect" id="Node000009" href="$classLGE_1_1Camera.html#abfbd1978fbb836d9d7b958527a8c2aee" title=" " alt="" coords="19,360,195,387"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="320,303,267,328,210,351,172,362,170,357,208,345,265,323,318,298"/>
+<area shape="rect" id="Node000010" href="$classLGE_1_1Camera.html#afe7a80145ef68192e659e41a1c3ce8de" title=" " alt="" coords="24,411,190,437"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="343,306,284,355,248,380,210,401,180,413,178,408,208,396,245,375,280,351,339,302"/>
+<area shape="rect" id="Node000011" href="$classLGE_1_1Camera.html#a700457ffe743b6ac539cc759226d74fe" title=" " alt="" coords="34,461,180,488"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="354,308,295,381,255,419,210,452,182,464,179,459,207,447,251,415,291,377,350,304"/>
+<area shape="rect" id="Node000012" href="$classLGE_1_1Camera.html#a7e607e1498972216da33a69b621dad00" title=" " alt="" coords="36,512,178,539"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="361,309,337,353,304,406,261,458,210,502,180,517,177,512,207,498,257,454,300,403,333,351,356,306"/>
+</map>

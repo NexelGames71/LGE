@@ -1,0 +1,7 @@
+<map id="LGE::Dependencies::GetStats" name="LGE::Dependencies::GetStats">
+<area shape="rect" id="Node000001" title=" " alt="" coords="109,23,255,65"/>
+<area shape="rect" id="Node000002" href="$TestDependencies_8cpp.html#ac7d0213aa008a4537d2b739ca96728af" title=" " alt="" coords="5,5,61,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,32,61,26,62,21,94,26"/>
+<area shape="rect" id="Node000003" href="$TestDependencies_8cpp.html#a3eed8aa25f31b84b211af1815819d59e" title=" " alt="" coords="5,56,61,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="94,62,62,67,61,62,93,56"/>
+</map>

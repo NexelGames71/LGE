@@ -1,0 +1,8 @@
+<map id="LGE::Material::CreateDefaultLitMaterial" name="LGE::Material::CreateDefaultLitMaterial">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,196,48"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Log.html#a53f3f4b8797ffd18145739c9e66d690a" title=" " alt="" coords="473,13,585,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,24,457,24,457,29,196,29"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1FileSystem.html#aeae9855420d588ff0391b77b6674e02b" title=" " alt="" coords="244,39,425,65"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,34,228,38,228,43,196,40"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="425,38,457,33,458,39,426,43"/>
+</map>

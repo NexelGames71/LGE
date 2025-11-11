@@ -1,0 +1,10 @@
+<map id="LGE::Package" name="LGE::Package">
+<area shape="rect" id="Node000001" title=" " alt="" coords="15,505,121,532"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="28,97,108,124"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,140,61,196,56,315,61,433,69,505,63,505,56,434,51,315,56,196,61,139"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="161,301,327,328"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="91,134,145,194,235,299,231,303,141,198,87,137"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,131,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="71,64,71,97,65,97,65,64"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="226,341,145,435,81,507,77,503,141,432,222,338"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="LGE::HealthResult" name="LGE::HealthResult">
+<area shape="rect" id="Node000001" title=" " alt="" coords="32,569,164,596"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,455,191,497"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,513,101,569,95,569,95,513"/>
+<area shape="rect" id="Node000003" href="$structLGE_1_1ValidationResult.html" title=" " alt="" coords="23,356,173,383"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="101,398,101,454,95,454,95,398"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="58,97,138,124"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="97,140,92,196,92,284,99,355,94,356,86,284,86,196,92,139"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="178,227,343,253"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="128,132,246,224,243,228,124,136"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="35,5,161,48"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="101,64,101,97,95,97,95,64"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="234,265,116,358,112,353,231,261"/>
+</map>

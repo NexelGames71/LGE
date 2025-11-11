@@ -1,0 +1,11 @@
+<map id="LGE::MaterialParameter" name="LGE::MaterialParameter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="153,219,314,245"/>
+<area shape="rect" id="Node000002" href="$structLGE_1_1Math_1_1Vector3.html" title=" " alt="" coords="5,112,142,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,148,119,171,147,192,195,216,193,220,144,197,116,175,92,152"/>
+<area shape="rect" id="Node000003" href="$structLGE_1_1Math_1_1Vector4.html" title=" " alt="" coords="165,112,302,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,154,236,218,231,218,231,154"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="326,104,472,147"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="370,160,323,197,273,220,271,216,320,192,367,156"/>
+<area shape="rect" id="Node000005" href="$classLGE_1_1Texture.html" title=" " alt="" coords="350,5,448,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="402,47,402,103,396,103,396,47"/>
+</map>

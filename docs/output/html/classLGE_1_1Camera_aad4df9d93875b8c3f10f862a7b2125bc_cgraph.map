@@ -1,0 +1,14 @@
+<map id="LGE::Camera::SetOrthographic" name="LGE::Camera::SetOrthographic">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,209,107"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Camera.html#a8d884fa85bbeff3acc43266a8f908fce" title=" " alt="" coords="271,39,480,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,78,255,72,256,78,209,83"/>
+<area shape="rect" id="Node000006" href="$classLGE_1_1Camera.html#ad5762d9f21d46ca4961b6371dca6f5db" title=" " alt="" coords="257,105,495,148"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="209,103,242,107,241,113,209,109"/>
+<area shape="rect" id="Node000003" href="$structLGE_1_1Math_1_1Matrix4.html#acaadbb2fff7609f792ce190240110ac5" title=" " alt="" coords="543,5,678,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="481,42,528,36,528,41,481,48"/>
+<area shape="rect" id="Node000005" href="$structLGE_1_1Math_1_1Matrix4.html#aaa8e7cbf99003770c579766b31515f61" title=" " alt="" coords="543,72,678,115"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="481,72,528,79,528,84,481,78"/>
+<area shape="rect" id="Node000004" href="$structLGE_1_1Math_1_1Matrix4.html#a02dc0417ebe852f1ef2ac703f5d5711e" title=" " alt="" coords="726,39,862,81"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="679,36,712,42,711,48,678,42"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="678,78,711,72,712,78,679,84"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="LGE::FSWatch::QueuedEvent" name="LGE::FSWatch::QueuedEvent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,316,202,343"/>
+<area shape="rect" id="Node000002" href="$structLGE_1_1FileEvent.html" title=" " alt="" coords="190,217,300,244"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,255,123,318,120,313,212,251"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="64,97,143,124"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="102,140,97,188,97,244,104,315,99,316,92,244,92,188,97,139"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="132,132,232,215,228,219,128,136"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="41,5,166,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="106,64,106,97,101,97,101,64"/>
+</map>

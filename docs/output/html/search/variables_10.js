@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['readonly_0',['readOnly',['../structLGE_1_1Mount.html#a0d99db80d23e131aefed2a67f6fbff41',1,'LGE::Mount']]],
+  ['reason_1',['reason',['../structLGE_1_1Optimization_1_1OptimizationRecommendation.html#a24e0ef59e0b265b93b8cf3d6c82bd9a7',1,'LGE::Optimization::OptimizationRecommendation']]],
+  ['recyclebin_2',['recycleBin',['../structLGE_1_1ProjectPaths.html#a953f1d71421748e197d5e104e5b6f037',1,'LGE::ProjectPaths']]],
+  ['reference_3',['reference',['../structLGE_1_1BrokenReference.html#a552a7d9c313b53a8552466ca5c9fa7c8',1,'LGE::BrokenReference']]],
+  ['referencedassets_4',['referencedAssets',['../structLGE_1_1AnalyticsReport.html#a3eaa4cd80e7188f220c5ec9481e72447',1,'LGE::AnalyticsReport']]],
+  ['relativepath_5',['relativePath',['../structLGE_1_1LxAssetMeta.html#af2fb10a75fc34b0aadb48e554d149180',1,'LGE::LxAssetMeta']]],
+  ['relevancescore_6',['relevanceScore',['../structLGE_1_1SearchResult.html#a8a7f0f68ecaf6446f9b8ae3794b4e84d',1,'LGE::SearchResult']]],
+  ['remotechecksum_7',['remoteChecksum',['../structLGE_1_1SyncEntry.html#a749120df1d8e658a65dfee17a0f87d84',1,'LGE::SyncEntry']]],
+  ['remotepath_8',['remotePath',['../structLGE_1_1SyncEntry.html#a9684500e701dee3367ce17e3c1b9ff86',1,'LGE::SyncEntry::remotePath'],['../structLGE_1_1SyncOptions.html#a43e1260fe397dbb67ea37173be550f02',1,'LGE::SyncOptions::remotePath']]],
+  ['remotesize_9',['remoteSize',['../structLGE_1_1SyncEntry.html#a8ebd00cb66c30951a3c7d5425a7e4413',1,'LGE::SyncEntry']]],
+  ['remotetimestamp_10',['remoteTimestamp',['../structLGE_1_1SyncEntry.html#afc2d0a7c319631c19f1702b962e47c6d',1,'LGE::SyncEntry']]],
+  ['removedlines_11',['removedLines',['../structLGE_1_1VersionDiff.html#a8292785fb24fb904191b925e5f6c8385',1,'LGE::VersionDiff']]],
+  ['repairaction_12',['repairAction',['../structLGE_1_1ValidationResult.html#ab6b22e74f33f392bb14d4bbfa372f2f6',1,'LGE::ValidationResult']]],
+  ['repository_13',['repository',['../structLGE_1_1PackageInfo.html#a87ae7bb2fb9b631ba740c351f5fbc11c',1,'LGE::PackageInfo::repository'],['../structLGE_1_1Package.html#a6cdd01aeffeffaec2250554658e353b8',1,'LGE::Package::repository']]],
+  ['resolution_14',['resolution',['../structLGE_1_1SyncEntry.html#a8d39f7ee2b1f94d18765f2f462beb166',1,'LGE::SyncEntry']]],
+  ['restoredependencies_15',['restoreDependencies',['../structLGE_1_1RestoreOptions.html#a6092c623a0ee62730d5ba871230b055f',1,'LGE::RestoreOptions']]],
+  ['restoremetadata_16',['restoreMetadata',['../structLGE_1_1RestoreOptions.html#a356887b455dced58459ac93bb8feae97',1,'LGE::RestoreOptions']]],
+  ['restoretime_17',['restoreTime',['../structLGE_1_1RestoreResult.html#ab3e8c6662157541f55752c7c687f52a3',1,'LGE::RestoreResult']]],
+  ['root_18',['root',['../structLGE_1_1ProjectPaths.html#ac2b9951ffbdd8089cfeed81742cdc1c7',1,'LGE::ProjectPaths::root'],['../structLGE_1_1Mount.html#a8cffbef5da33d1106fe6a31e7c459b7b',1,'LGE::Mount::root']]]
+];

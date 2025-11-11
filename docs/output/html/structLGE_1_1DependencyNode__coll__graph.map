@@ -1,0 +1,10 @@
+<map id="LGE::DependencyNode" name="LGE::DependencyNode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,335,165,361"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="45,97,125,124"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,140,79,196,80,274,86,334,81,334,75,275,73,196,79,139"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="121,205,286,232"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="112,132,191,203,188,207,108,136"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="22,5,148,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,64,88,97,82,97,82,64"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="183,245,99,336,95,332,180,242"/>
+</map>

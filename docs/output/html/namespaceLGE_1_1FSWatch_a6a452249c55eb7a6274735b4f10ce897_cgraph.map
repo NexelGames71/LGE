@@ -1,0 +1,18 @@
+<map id="LGE::FSWatch::Watch" name="LGE::FSWatch::Watch">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,96,160,123"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Log.html#a53f3f4b8797ffd18145739c9e66d690a" title=" " alt="" coords="848,71,960,97"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,93,144,60,175,43,207,31,295,12,385,4,476,4,565,10,648,21,724,35,843,63,842,69,723,40,647,27,564,16,476,9,386,9,296,18,208,36,177,48,147,64,101,98"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1Log.html#ab0265ee050b8873a2fd31fbdb696ced0" title=" " alt="" coords="238,45,344,72"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="140,93,222,73,223,78,141,98"/>
+<area shape="rect" id="Node000004" href="$namespaceLGE_1_1LxPath.html#a314a60ce690c90f4ee0b4e64c0199408" title=" " alt="" coords="636,121,800,148"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="160,109,588,125,621,127,620,132,588,131,160,114"/>
+<area shape="rect" id="Node000005" href="$namespaceLGE_1_1VFS.html#aee891612cc393155878775a61e486c0b" title=" " alt="" coords="208,147,375,173"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="141,121,219,140,218,145,140,126"/>
+<area shape="rect" id="Node000007" href="$classLGE_1_1Log.html#aa6f98018af29c23dd7f574d3df5dda5e" title=" " alt="" coords="234,197,348,224"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="105,121,151,152,209,183,224,189,222,194,207,188,148,156,102,126"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="769,118,837,99,839,104,771,123"/>
+<area shape="poly" id="edge8_Node000005_Node000004" title=" " alt="" coords="375,152,621,138,621,143,376,158"/>
+<area shape="rect" id="Node000006" href="$namespaceLGE_1_1LxPath.html#ab664986e94ce09aa029f9eb2fcf50133" title=" " alt="" coords="423,197,588,224"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="352,171,432,191,431,196,350,177"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="545,194,663,151,665,156,546,199"/>
+</map>

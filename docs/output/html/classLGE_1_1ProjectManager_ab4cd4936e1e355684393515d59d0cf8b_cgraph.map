@@ -1,0 +1,13 @@
+<map id="LGE::ProjectManager::SaveRecentProject" name="LGE::ProjectManager::SaveRecentProject">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,52,152,95"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Log.html#a53f3f4b8797ffd18145739c9e66d690a" title=" " alt="" coords="422,5,534,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,49,199,37,308,24,406,18,406,23,308,29,200,43,150,54"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1ProjectManager.html#af60364a6575a847f63d3a36d07e1beab" title=" " alt="" coords="200,52,346,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,71,185,71,185,76,152,76"/>
+<area shape="rect" id="Node000005" href="$classLGE_1_1ProjectManager.html#af3b70e8bd5daac16f673530afc4010f1" title=" " alt="" coords="394,111,561,153"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="151,93,200,104,292,117,379,125,378,130,291,122,199,109,150,98"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="346,51,410,34,411,39,347,56"/>
+<area shape="rect" id="Node000004" href="$namespaceLGE_1_1LxFile.html#a11e62876b312a11b881b484bb3a5ee71" title=" " alt="" coords="410,60,545,87"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="347,71,395,71,395,76,347,76"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="347,92,387,103,385,108,346,97"/>
+</map>

@@ -1,0 +1,23 @@
+<map id="LGE::AssetMetadata::SaveMetadata" name="LGE::AssetMetadata::SaveMetadata">
+<area shape="rect" id="Node000001" title=" " alt="" coords="390,205,533,248"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1AssetFactory.html#a39f7050f69be7a0aa3650d07fe1fc763" title=" " alt="" coords="198,5,339,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="440,193,399,127,372,93,340,62,324,51,327,46,344,58,376,89,404,124,445,190"/>
+<area shape="rect" id="Node000004" href="$classLGE_1_1AssetFactory.html#a0b31104c56510df0545f2ea38c59845a" title=" " alt="" coords="198,72,339,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="425,196,386,162,341,129,320,117,323,113,343,124,389,158,429,192"/>
+<area shape="rect" id="Node000005" href="$classLGE_1_1AssetFactory.html#a4e5a8c90645624ae5832320655d01fe6" title=" " alt="" coords="198,139,339,181"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="383,202,331,184,333,179,385,197"/>
+<area shape="rect" id="Node000006" href="$classLGE_1_1AssetFactory.html#a67aa46ee91385e105dcdf48edacd6197" title=" " alt="" coords="198,205,339,248"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="374,229,339,229,339,224,374,224"/>
+<area shape="rect" id="Node000007" href="$classLGE_1_1AssetFactory.html#a19538e58cc1f63d8973cccda81e534b3" title=" " alt="" coords="198,272,339,315"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="385,256,333,274,331,269,383,251"/>
+<area shape="rect" id="Node000008" href="$classLGE_1_1AssetManager.html#a0aa918f6bcc7fc31eac48828d5b5d18e" title=" " alt="" coords="195,339,342,381"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="429,261,389,295,343,329,323,340,320,336,341,324,386,291,425,257"/>
+<area shape="rect" id="Node000009" href="$classLGE_1_1AssetManager.html#a74b13575741ae0db7cec3b1c45e6dcc0" title=" " alt="" coords="195,405,342,448"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="445,263,404,329,376,364,344,395,327,407,324,403,340,391,372,361,399,326,440,260"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1AssetFactory.html#aff9736af9072e61f6b8d76eeb2239d87" title=" " alt="" coords="5,139,147,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="203,58,196,62,144,102,101,140,97,136,140,97,193,58,200,54"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="192,123,140,141,139,136,190,118"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="182,163,147,163,147,157,182,157"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="190,202,139,184,140,179,192,197"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="200,266,193,262,140,223,97,184,101,180,144,218,196,258,203,262"/>
+</map>

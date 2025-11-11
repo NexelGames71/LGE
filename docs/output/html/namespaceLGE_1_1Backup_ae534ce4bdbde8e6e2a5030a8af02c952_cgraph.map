@@ -1,0 +1,21 @@
+<map id="LGE::Backup::Initialize" name="LGE::Backup::Initialize">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,161,108"/>
+<area shape="rect" id="Node000002" href="$namespaceLGE_1_1LxFile.html#a7a3f0b3462a34877039001eb0aaac788" title=" " alt="" coords="209,5,399,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,78,208,41,231,34,233,39,210,47,116,83"/>
+<area shape="rect" id="Node000007" href="$namespaceLGE_1_1LxFile.html#a11e62876b312a11b881b484bb3a5ee71" title=" " alt="" coords="236,56,372,83"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="161,83,221,76,221,81,162,88"/>
+<area shape="rect" id="Node000008" href="$classLGE_1_1Log.html#ab0265ee050b8873a2fd31fbdb696ced0" title=" " alt="" coords="251,107,357,133"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="162,101,235,110,235,115,161,106"/>
+<area shape="rect" id="Node000009" href="$namespaceLGE_1_1LxFile.html#aefeac425ba46d16739c0873b3740191c" title=" " alt="" coords="223,157,385,184"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="116,106,210,143,233,150,231,155,208,148,114,111"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1Log.html#a53f3f4b8797ffd18145739c9e66d690a" title=" " alt="" coords="1078,5,1190,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="399,16,1063,16,1063,21,399,21"/>
+<area shape="rect" id="Node000004" href="$namespaceLGE_1_1VFS.html#abb5d35abfe80efe2f7a07394ad5b706a" title=" " alt="" coords="447,31,605,57"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="400,27,432,31,431,36,399,32"/>
+<area shape="rect" id="Node000005" href="$namespaceLGE_1_1LxPath.html#ab664986e94ce09aa029f9eb2fcf50133" title=" " alt="" coords="653,31,819,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="606,41,638,41,638,47,606,47"/>
+<area shape="rect" id="Node000006" href="$namespaceLGE_1_1LxPath.html#a314a60ce690c90f4ee0b4e64c0199408" title=" " alt="" coords="867,31,1030,57"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="585,55,654,67,736,72,818,67,874,58,875,64,819,72,736,77,653,72,584,61"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="819,41,851,41,851,47,819,47"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="1030,30,1062,26,1063,31,1031,35"/>
+</map>

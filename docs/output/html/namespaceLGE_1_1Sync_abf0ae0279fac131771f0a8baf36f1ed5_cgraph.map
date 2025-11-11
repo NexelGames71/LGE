@@ -1,0 +1,10 @@
+<map id="LGE::Sync::SyncByType" name="LGE::Sync::SyncByType">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,173,81"/>
+<area shape="rect" id="Node000002" href="$namespaceLGE_1_1AssetRegistry.html#aae475c8a7866694ae2268254e8cfca06" title=" " alt="" coords="234,5,372,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,51,218,40,219,46,162,57"/>
+<area shape="rect" id="Node000003" href="$namespaceLGE_1_1Sync.html#ad4102812e07cccff15b3249960defaad" title=" " alt="" coords="221,96,385,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,79,216,90,215,95,161,85"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="269,97,263,87,267,78,281,71,303,69,327,72,339,78,337,83,325,77,303,75,282,77,271,81,268,87,273,94"/>
+<area shape="rect" id="Node000004" href="$namespaceLGE_1_1AssetRegistry.html#ac9aa62a1e0c929e88bec00618b489988" title=" " alt="" coords="433,88,571,131"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="385,107,417,107,417,112,385,112"/>
+</map>

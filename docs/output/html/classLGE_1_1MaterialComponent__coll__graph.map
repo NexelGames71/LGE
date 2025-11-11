@@ -1,0 +1,7 @@
+<map id="LGE::MaterialComponent" name="LGE::MaterialComponent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,180,174,207"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Component.html" title=" " alt="" coords="28,104,151,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,146,92,180,87,180,87,146"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1GameObject.html" title=" " alt="" coords="25,5,154,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="92,48,92,104,87,104,87,48"/>
+</map>

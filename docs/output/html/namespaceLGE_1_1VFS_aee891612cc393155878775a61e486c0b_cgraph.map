@@ -1,0 +1,10 @@
+<map id="LGE::VFS::ToVirtualPath" name="LGE::VFS::ToVirtualPath">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,173,57"/>
+<area shape="rect" id="Node000002" href="$namespaceLGE_1_1LxPath.html#ab664986e94ce09aa029f9eb2fcf50133" title=" " alt="" coords="221,5,386,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,31,205,28,205,33,173,37"/>
+<area shape="rect" id="Node000003" href="$namespaceLGE_1_1LxPath.html#a314a60ce690c90f4ee0b4e64c0199408" title=" " alt="" coords="434,31,597,57"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="173,41,418,41,418,47,173,47"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="387,26,419,30,418,35,386,31"/>
+<area shape="rect" id="Node000004" href="$classLGE_1_1Log.html#a53f3f4b8797ffd18145739c9e66d690a" title=" " alt="" coords="645,31,758,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="598,41,630,41,630,47,598,47"/>
+</map>

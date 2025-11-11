@@ -1,0 +1,12 @@
+<map id="LGE::Bundles::GetManifest" name="LGE::Bundles::GetManifest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="492,72,673,99"/>
+<area shape="rect" id="Node000002" href="$namespaceLGE_1_1Bundles.html#a0312d9e844fa74a2455367b8569f3bbc" title=" " alt="" coords="244,5,432,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="509,70,429,51,430,46,510,65"/>
+<area shape="rect" id="Node000003" href="$namespaceLGE_1_1Bundles.html#a1bc32eb859c4eaddf1e5fa299572b048" title=" " alt="" coords="232,72,444,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="476,88,444,88,444,83,476,83"/>
+<area shape="rect" id="Node000005" href="$namespaceLGE_1_1Bundles.html#a6024393f4e69a628627675d495533288" title=" " alt="" coords="238,123,438,165"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="510,105,430,125,429,119,509,100"/>
+<area shape="rect" id="Node000004" href="$namespaceLGE_1_1Bundles.html#a7eac06d1dd3b550a0bd5615c8eb1b952" title=" " alt="" coords="5,72,184,99"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="216,88,184,88,184,83,216,83"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="137,60,123,53,94,51,69,53,55,57,52,63,58,70,54,73,46,63,51,53,68,47,95,45,124,48,139,55"/>
+</map>

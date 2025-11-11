@@ -1,0 +1,7 @@
+<map id="LGE::Application::Shutdown" name="LGE::Application::Shutdown">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,191,57"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Log.html#ab0265ee050b8873a2fd31fbdb696ced0" title=" " alt="" coords="253,5,360,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,30,237,24,238,30,191,35"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1UI.html#a9684e81b95e3586446017c107e0798dc" title=" " alt="" coords="239,56,374,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,53,224,57,223,62,190,58"/>
+</map>

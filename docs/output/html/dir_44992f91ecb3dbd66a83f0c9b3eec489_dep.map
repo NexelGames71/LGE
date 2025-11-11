@@ -1,0 +1,10 @@
+<map id="core" name="core">
+<area shape="rect" id="node1" href="dir_7b3f4d3f87d4df295a5dcbdcf4dcc761.html" title="math" alt="" coords="27,128,77,155"/>
+<area shape="rect" id="node2" href="dir_862529df16845ef7cc83efdf859234a4.html" title="rendering" alt="" coords="102,128,176,155"/>
+<area shape="rect" id="node3" href="dir_44992f91ecb3dbd66a83f0c9b3eec489.html" title="core" alt="" coords="72,53,118,80"/>
+<area shape="poly" id="edge1" href="dir_000003_000011.html" alt="" coords="90,82,69,116,65,113,85,79"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000003_000011.html" title="3" alt="" coords="72,108,79,124"/>
+<area shape="poly" id="edge2" href="dir_000003_000015.html" alt="" coords="105,79,125,113,121,116,100,82"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000003_000015.html" title="3" alt="" coords="125,100,132,116"/>
+<area shape="rect" id="clust1" href="dir_89d76d51ba78189a1b1ef78cf1996b16.html" title="LGE" alt="" coords="16,16,187,165"/>
+</map>

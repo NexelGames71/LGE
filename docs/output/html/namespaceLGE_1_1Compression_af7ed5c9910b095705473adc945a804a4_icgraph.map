@@ -1,0 +1,11 @@
+<map id="LGE::Compression::CompressFiles" name="LGE::Compression::CompressFiles">
+<area shape="rect" id="Node000001" title=" " alt="" coords="516,35,716,77"/>
+<area shape="rect" id="Node000002" href="$namespaceLGE_1_1Compression.html#a51471b84f07ed161f929413e01765d2a" title=" " alt="" coords="268,5,468,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="500,45,468,41,469,36,501,40"/>
+<area shape="rect" id="Node000003" href="$namespaceLGE_1_1Backup.html#a8db5be221811de56211321d119281ce0" title=" " alt="" coords="273,72,463,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="501,72,464,77,463,71,500,67"/>
+<area shape="rect" id="Node000004" href="$namespaceLGE_1_1Backup.html#ad6294b6da335fe274372b3821fe490b4" title=" " alt="" coords="5,31,220,73"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="257,74,220,69,220,63,258,68"/>
+<area shape="rect" id="Node000005" href="$namespaceLGE_1_1Backup.html#a7de11ff292510de53398d602090fa1fe" title=" " alt="" coords="5,97,220,140"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="258,102,220,107,220,102,257,97"/>
+</map>

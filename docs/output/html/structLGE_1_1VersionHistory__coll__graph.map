@@ -1,0 +1,15 @@
+<map id="LGE::VersionHistory" name="LGE::VersionHistory">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,575,146,601"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="76,97,155,124"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,138,71,188,61,218,57,250,57,490,63,537,74,574,68,575,58,538,52,491,52,249,56,217,66,186,94,136"/>
+<area shape="rect" id="Node000005" href="$structLGE_1_1AssetVersion.html" title=" " alt="" coords="145,377,278,404"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="114,139,112,216,117,261,131,304,143,326,160,345,194,375,191,379,156,349,139,329,126,306,112,262,106,216,109,139"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="218,237,384,264"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="146,131,286,235,283,239,142,135"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="53,5,178,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,64,118,97,113,97,113,64"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="97,476,315,503"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="179,514,94,576,91,572,175,510"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="213,420,210,476,204,476,207,420"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="287,278,222,378,217,376,282,276"/>
+</map>

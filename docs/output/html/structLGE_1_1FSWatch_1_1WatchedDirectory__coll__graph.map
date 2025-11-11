@@ -1,0 +1,11 @@
+<map id="LGE::FSWatch::WatchedDirectory" name="LGE::FSWatch::WatchedDirectory">
+<area shape="rect" id="Node000001" title=" " alt="" coords="36,235,257,261"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="36,128,116,155"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,166,140,233,136,236,91,169"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,131,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="73,63,78,128,72,128,68,64"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="154,120,310,163"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="208,177,159,236,155,232,203,173"/>
+<area shape="rect" id="Node000005" href="$classLGE_1_1FileSystemWatcher.html" title=" " alt="" coords="155,13,325,40"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="241,55,236,120,231,119,235,55"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="LGE::LxFile::Copy" name="LGE::LxFile::Copy">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,135,32"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Log.html#a53f3f4b8797ffd18145739c9e66d690a" title=" " alt="" coords="814,5,926,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,16,798,16,798,21,135,21"/>
+<area shape="rect" id="Node000003" href="$namespaceLGE_1_1VFS.html#abb5d35abfe80efe2f7a07394ad5b706a" title=" " alt="" coords="183,31,341,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,25,168,29,167,34,134,30"/>
+<area shape="rect" id="Node000004" href="$namespaceLGE_1_1LxPath.html#ab664986e94ce09aa029f9eb2fcf50133" title=" " alt="" coords="389,31,554,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="341,41,373,41,373,47,341,47"/>
+<area shape="rect" id="Node000005" href="$namespaceLGE_1_1LxPath.html#a314a60ce690c90f4ee0b4e64c0199408" title=" " alt="" coords="602,31,766,57"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="320,55,389,67,472,72,554,67,610,58,610,64,555,72,472,77,389,72,319,61"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="555,41,587,41,587,47,555,47"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="766,30,798,26,799,31,767,35"/>
+</map>

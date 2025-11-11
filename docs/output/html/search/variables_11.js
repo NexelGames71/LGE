@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['s_5fapi_0',['s_API',['../classLGE_1_1Renderer.html#a930c8d85e4b76f2915142cc73096633c',1,'LGE::Renderer']]],
+  ['s_5ftasks_1',['s_Tasks',['../namespaceLGE_1_1ThreadPool.html#a2bb57b507ae05174da6e1bd4ae237da5',1,'LGE::ThreadPool']]],
+  ['s_5ftaskscondition_2',['s_TasksCondition',['../namespaceLGE_1_1ThreadPool.html#ad486987558d3f54c68325762496b84aa',1,'LGE::ThreadPool']]],
+  ['s_5ftasksmutex_3',['s_TasksMutex',['../namespaceLGE_1_1ThreadPool.html#ae396477d14713955ca7d531fcc448e59',1,'LGE::ThreadPool']]],
+  ['samples_4',['samples',['../structLGE_1_1Testing_1_1BenchmarkConfig.html#abaa6f5b902f905288d2e4618fb4b2ff9',1,'LGE::Testing::BenchmarkConfig']]],
+  ['samplesize_5',['sampleSize',['../structLGE_1_1Testing_1_1BenchmarkResult.html#af8b3b47788007607d7a5445ae415722e',1,'LGE::Testing::BenchmarkResult']]],
+  ['scenespath_6',['scenesPath',['../structLGE_1_1ProjectConfig.html#a6b5a377a1065a8302d93b794c653ac49',1,'LGE::ProjectConfig']]],
+  ['scriptspath_7',['scriptsPath',['../structLGE_1_1ProjectConfig.html#a502205699aee6e30d958b1ed2b95a44d',1,'LGE::ProjectConfig']]],
+  ['settings_8',['settings',['../structLGE_1_1ProjectPaths.html#afad61bb6999061a420180910a7ad151a',1,'LGE::ProjectPaths']]],
+  ['shaderspath_9',['shadersPath',['../structLGE_1_1ProjectConfig.html#a65e410fcd2c121ea6325bf9beccf87fb',1,'LGE::ProjectConfig']]],
+  ['similarity_10',['similarity',['../structLGE_1_1VersionDiff.html#a8a8c1e59655150f6198c23caf6c77fd8',1,'LGE::VersionDiff']]],
+  ['size_11',['size',['../structLGE_1_1CacheEntry.html#adf444bdc96479fe871509f7907caa631',1,'LGE::CacheEntry::size'],['../structLGE_1_1StreamChunk.html#a4d856eda10e55b089b886ea7837285a2',1,'LGE::StreamChunk::size']]],
+  ['sizediff_12',['sizeDiff',['../structLGE_1_1VersionDiff.html#abafb238583750382da0164c0e9e34042',1,'LGE::VersionDiff']]],
+  ['sourcefile_13',['sourceFile',['../structLGE_1_1LxAssetMeta.html#ac59df84d668ae87d05f04b9fddb1e097',1,'LGE::LxAssetMeta::sourceFile'],['../structLGE_1_1Meta.html#a9505c876d75f0f25bcd2e9b5bc9ae781',1,'LGE::Meta::sourceFile']]],
+  ['status_14',['status',['../structLGE_1_1BrokenReference.html#a919e62cf650102508917f0b709082945',1,'LGE::BrokenReference::status'],['../structLGE_1_1SyncEntry.html#a2d8b54710a863c98c096fcda10fc96f4',1,'LGE::SyncEntry::status'],['../structLGE_1_1ValidationResult.html#a85a79499a416b8f981bfaf3ef457ae50',1,'LGE::ValidationResult::status'],['../structLGE_1_1Testing_1_1TestResult.html#a668acedb5c3ccfe5984b9a4f6b3fe491',1,'LGE::Testing::TestResult::status']]],
+  ['success_15',['success',['../structLGE_1_1BackupResult.html#a940ea7690bba9762c384cf3dbf008775',1,'LGE::BackupResult::success'],['../structLGE_1_1RestoreResult.html#ac3886ec8d9feb087cca74ed6e3535cfc',1,'LGE::RestoreResult::success'],['../structLGE_1_1BundleLoadResult.html#a1f0e2d903f9f67e3c1824fed1ca9b0b7',1,'LGE::BundleLoadResult::success'],['../structLGE_1_1CompressionResult.html#ad0dee1344886f0dd91458f935008ea77',1,'LGE::CompressionResult::success'],['../structLGE_1_1DecompressionResult.html#a1829e6616a6909e896beb5510821d3d7',1,'LGE::DecompressionResult::success'],['../structLGE_1_1ImportResult.html#a394d251f67de2f1bcd68026d1a59ebb6',1,'LGE::ImportResult::success'],['../structLGE_1_1ExportResult.html#aca182c851178d443afe04136a9812233',1,'LGE::ExportResult::success'],['../structLGE_1_1OptimizationResult.html#a56239515d2b9e381e16759a4a97bfc07',1,'LGE::OptimizationResult::success'],['../structLGE_1_1SyncResult.html#af3bafc6501e06b3d22c0013c5781e6c1',1,'LGE::SyncResult::success']]],
+  ['suggestedquality_16',['suggestedQuality',['../structLGE_1_1Optimization_1_1OptimizationRecommendation.html#a0522ce3f71e6a123df0f98f400be7064',1,'LGE::Optimization::OptimizationRecommendation']]],
+  ['suggestedtarget_17',['suggestedTarget',['../structLGE_1_1Optimization_1_1OptimizationRecommendation.html#a6cb389d66b8b3a6fd87ce28bac053120',1,'LGE::Optimization::OptimizationRecommendation']]],
+  ['suite_18',['suite',['../structLGE_1_1Testing_1_1TestCase.html#ac43bacf9fa99103e2fc9adc94bd01a2c',1,'LGE::Testing::TestCase']]],
+  ['synctime_19',['syncTime',['../structLGE_1_1SyncResult.html#a64000fb66f45a9c1eb98e420b67a9f8e',1,'LGE::SyncResult']]]
+];

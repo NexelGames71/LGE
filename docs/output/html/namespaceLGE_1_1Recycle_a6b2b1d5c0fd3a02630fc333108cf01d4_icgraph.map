@@ -1,0 +1,13 @@
+<map id="LGE::Recycle::GetRecycleBinPath" name="LGE::Recycle::GetRecycleBinPath">
+<area shape="rect" id="Node000001" title=" " alt="" coords="464,48,644,91"/>
+<area shape="rect" id="Node000002" href="$namespaceLGE_1_1Recycle.html#aaf0b28bf2f87b7ac0bef361db835482e" title=" " alt="" coords="230,5,416,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="449,49,387,35,388,30,450,44"/>
+<area shape="rect" id="Node000003" href="$namespaceLGE_1_1Recycle.html#afb933b6bff59f82cf0bd98ff53a58971" title=" " alt="" coords="243,56,403,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="449,72,403,72,403,67,449,67"/>
+<area shape="rect" id="Node000004" href="$namespaceLGE_1_1Recycle.html#afebbeb7ce2524043df381b041f2b5e68" title=" " alt="" coords="257,107,389,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="450,95,388,109,387,103,449,90"/>
+<area shape="rect" id="Node000005" href="$namespaceLGE_1_1Recycle.html#ab1ccd9c9ba66cf1ba490a6564e417040" title=" " alt="" coords="22,77,165,104"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="241,112,165,102,165,97,242,107"/>
+<area shape="rect" id="Node000006" href="$namespaceLGE_1_1Recycle.html#a4d5822d3e3bcef39ee0280869b78ec43" title=" " alt="" coords="5,128,182,171"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="242,133,183,141,182,135,241,128"/>
+</map>

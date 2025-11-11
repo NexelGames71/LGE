@@ -1,0 +1,9 @@
+<map id="LGE::LxFile::RemoveDirectory" name="LGE::LxFile::RemoveDirectory">
+<area shape="rect" id="Node000001" title=" " alt="" coords="242,72,442,99"/>
+<area shape="rect" id="Node000002" href="$namespaceLGE_1_1Versioning.html#ac89f33831ce990a8bf35ef89462d899f" title=" " alt="" coords="11,5,188,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="268,70,188,51,189,45,269,65"/>
+<area shape="rect" id="Node000003" href="$namespaceLGE_1_1Bundles.html#a681809a9d58791f140e994496bd31ddb" title=" " alt="" coords="5,72,194,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,88,194,88,194,83,226,83"/>
+<area shape="rect" id="Node000004" href="$namespaceLGE_1_1PackageMgr.html#a5fa80ee6187608019aeeb27bcf591cf7" title=" " alt="" coords="6,123,193,149"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="260,105,167,125,166,119,259,100"/>
+</map>

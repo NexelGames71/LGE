@@ -1,0 +1,10 @@
+<map id="LGE::PackageMgr::SavePackageInfo" name="LGE::PackageMgr::SavePackageInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,245,32"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Log.html#a53f3f4b8797ffd18145739c9e66d690a" title=" " alt="" coords="715,5,828,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,16,700,16,700,21,245,21"/>
+<area shape="rect" id="Node000003" href="$namespaceLGE_1_1LxPath.html#aefae4d45f84718077f5218f64d2f074c" title=" " alt="" coords="293,31,456,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="246,28,277,32,277,37,245,34"/>
+<area shape="rect" id="Node000004" href="$namespaceLGE_1_1LxPath.html#a314a60ce690c90f4ee0b4e64c0199408" title=" " alt="" coords="504,31,667,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="456,41,488,41,488,47,456,47"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="668,30,700,26,700,31,668,35"/>
+</map>

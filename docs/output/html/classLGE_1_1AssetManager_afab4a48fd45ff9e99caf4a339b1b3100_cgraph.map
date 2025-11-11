@@ -1,0 +1,11 @@
+<map id="LGE::AssetManager::Initialize" name="LGE::AssetManager::Initialize">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,24,153,67"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Log.html#a53f3f4b8797ffd18145739c9e66d690a" title=" " alt="" coords="396,5,508,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,21,200,9,274,5,348,9,380,11,380,16,348,15,274,11,201,15,148,26"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1Log.html#ab0265ee050b8873a2fd31fbdb696ced0" title=" " alt="" coords="399,60,505,87"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,65,201,76,274,80,348,76,383,75,383,80,348,81,274,85,200,81,147,70"/>
+<area shape="rect" id="Node000004" href="$classLGE_1_1AssetManager.html#a016bb2d3a7522cd9cb54c9d743ec0446" title=" " alt="" coords="201,24,348,67"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="153,43,185,43,185,48,153,48"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="348,32,380,27,381,32,349,37"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="349,54,384,60,384,65,348,60"/>
+</map>

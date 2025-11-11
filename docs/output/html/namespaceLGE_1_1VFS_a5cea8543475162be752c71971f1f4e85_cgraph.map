@@ -1,0 +1,18 @@
+<map id="LGE::VFS::InitializeDefaultMounts" name="LGE::VFS::InitializeDefaultMounts">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,185,122"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1Log.html#a53f3f4b8797ffd18145739c9e66d690a" title=" " alt="" coords="652,88,765,114"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,77,232,45,287,29,348,15,412,6,477,3,542,8,605,23,650,46,686,75,682,79,647,50,603,28,541,13,477,8,412,11,349,20,289,34,234,50,146,82"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1Log.html#ab0265ee050b8873a2fd31fbdb696ced0" title=" " alt="" coords="470,37,576,64"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,81,232,73,349,60,454,52,454,57,350,65,233,78,186,86"/>
+<area shape="rect" id="Node000004" href="$namespaceLGE_1_1LxFS.html#a5684a30f3fa2906f4dafed0258a79166" title=" " alt="" coords="233,88,393,114"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="185,98,217,98,217,104,185,104"/>
+<area shape="rect" id="Node000005" href="$namespaceLGE_1_1VFS.html#a54b012d377481aa3685b372a196259ed" title=" " alt="" coords="237,138,389,165"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="186,119,238,132,237,137,184,125"/>
+<area shape="rect" id="Node000007" href="$namespaceLGE_1_1LxFS.html#a12aeb6699602f14153953dceb4284914" title=" " alt="" coords="249,189,377,216"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="133,121,180,148,234,175,250,181,248,186,232,179,177,153,130,125"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="377,135,441,124,543,111,636,103,637,108,544,117,441,129,378,140"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="367,135,392,124,406,114,415,103,425,92,440,80,463,68,466,72,442,85,429,96,419,106,409,118,394,129,369,140"/>
+<area shape="rect" id="Node000006" href="$namespaceLGE_1_1LxPath.html#a314a60ce690c90f4ee0b4e64c0199408" title=" " alt="" coords="441,138,604,165"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="390,149,425,149,425,154,390,154"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="574,135,642,116,643,122,575,140"/>
+</map>

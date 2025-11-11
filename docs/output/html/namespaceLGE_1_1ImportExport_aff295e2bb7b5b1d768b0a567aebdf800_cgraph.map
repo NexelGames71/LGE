@@ -1,0 +1,9 @@
+<map id="LGE::ImportExport::CanImport" name="LGE::ImportExport::CanImport">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,144,69"/>
+<area shape="rect" id="Node000002" href="$classLGE_1_1ImporterRegistry.html#ae32195eae32f4eb6c04f7c01d95fc621" title=" " alt="" coords="192,5,373,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,36,176,31,177,36,145,41"/>
+<area shape="rect" id="Node000003" href="$classLGE_1_1ImporterRegistry.html#a257b599e47f36d4dba7752b72f128c30" title=" " alt="" coords="206,56,358,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,55,191,62,190,67,144,60"/>
+<area shape="rect" id="Node000004" href="$classLGE_1_1ImporterRegistry.html#a92729de6d0106ae180080087ae1b762f" title=" " alt="" coords="421,56,596,99"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="359,75,405,75,405,80,359,80"/>
+</map>

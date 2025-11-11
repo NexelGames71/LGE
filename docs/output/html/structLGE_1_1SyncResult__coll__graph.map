@@ -1,0 +1,12 @@
+<map id="LGE::SyncResult" name="LGE::SyncResult">
+<area shape="rect" id="Node000001" title=" " alt="" coords="6,500,130,527"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="84,401,286,428"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,440,85,502,82,497,157,436"/>
+<area shape="rect" id="Node000003" href="$structLGE_1_1SyncEntry.html" title=" " alt="" coords="100,303,217,329"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="169,344,184,400,179,402,164,345"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="28,97,108,124"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="71,140,71,499,65,499,65,140"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="82,137,156,301,151,303,77,139"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,5,131,48"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="71,64,71,97,65,97,65,64"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="LGE::MetaDB::GetAssetTypeFromExtension" name="LGE::MetaDB::GetAssetTypeFromExtension">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,200,48"/>
+<area shape="rect" id="Node000002" href="$namespaceLGE_1_1LxPath.html#a442709c353add1504cfb1d9d496f3014" title=" " alt="" coords="248,13,431,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,24,232,24,232,29,200,29"/>
+<area shape="rect" id="Node000003" href="$namespaceLGE_1_1LxPath.html#a282200340a7ec214f14f5d64e9e41396" title=" " alt="" coords="479,13,657,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="431,24,463,24,463,29,431,29"/>
+<area shape="rect" id="Node000004" href="$namespaceLGE_1_1LxPath.html#a314a60ce690c90f4ee0b4e64c0199408" title=" " alt="" coords="705,13,869,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="657,24,690,24,690,29,657,29"/>
+<area shape="rect" id="Node000005" href="$classLGE_1_1Log.html#a53f3f4b8797ffd18145739c9e66d690a" title=" " alt="" coords="917,13,1029,40"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="869,24,901,24,901,29,869,29"/>
+</map>

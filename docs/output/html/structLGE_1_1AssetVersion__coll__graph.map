@@ -1,0 +1,10 @@
+<map id="LGE::AssetVersion" name="LGE::AssetVersion">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,377,138,404"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="32,97,111,124"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,140,65,196,65,305,72,377,67,377,60,305,60,196,65,139"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="153,237,318,264"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="99,132,222,235,219,239,96,136"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="9,5,134,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="74,64,74,97,69,97,69,64"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="211,276,88,379,85,375,208,272"/>
+</map>

@@ -1,0 +1,19 @@
+<map id="ProjectBrowser.h" name="ProjectBrowser.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="54,5,176,32"/>
+<area shape="rect" id="Node000002" href="$ProjectManager_8h.html" title=" " alt="" coords="93,80,260,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,31,158,66,154,70,124,34"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="95,229,148,256"/>
+<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="98,34,65,61,31,97,18,118,10,139,9,159,16,180,29,196,45,209,81,227,79,232,42,214,25,200,11,183,4,160,5,137,13,115,27,94,62,57,95,30"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="26,155,84,181"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="109,34,83,81,64,141,59,139,78,79,104,31"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="301,155,369,181"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="171,30,223,49,274,78,303,108,324,140,320,143,299,111,271,82,221,54,170,35"/>
+<area shape="rect" id="Node000003" href="$Project_8h.html" title=" " alt="" coords="159,155,277,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="186,106,206,140,201,143,181,109"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="172,108,150,156,131,215,126,213,145,154,167,106"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="157,110,91,149,88,144,154,105"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="205,105,294,145,292,150,203,110"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="203,184,152,222,149,218,199,180"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="177,229,258,256"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="220,182,220,214,215,214,215,182"/>
+</map>
